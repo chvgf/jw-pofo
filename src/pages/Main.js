@@ -45,6 +45,7 @@ function Main(props) {
         <p>개발자를 꿈꾸는 천준우\입니다.</p>
         <p>개발자를 꿈꾸는 천준우\입니다.</p>
         <p>개발자를 꿈꾸는 천준우\입니다.</p>
+        <p>개발자를 꿈꾸는 천준우\입니다.</p>
       </SectionInfo>
       <SectionImg>
         <img src={mainImg}></img>
