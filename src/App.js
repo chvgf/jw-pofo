@@ -11,7 +11,6 @@ ${reset}
     *{
       background-color: #222;
       color: #fff;
-      overflow: hidden; // 이따 삭제
     }
     body {
       box-sizing: border-box;
