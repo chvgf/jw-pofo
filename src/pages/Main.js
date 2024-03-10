@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import mainImg from "../imges/cjw1.jpg";
 import Typewriter from "typewriter-effect";
@@ -8,6 +7,18 @@ const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 100px;
+
+  /* .test {
+    position: absolute;
+    width: 10000px;
+    height: 500px;
+    top: -400px;
+    background-color: yellow;
+    transition: 2s;
+    &:hover {
+      transform: translateY(300%);
+    }
+  } */
 `;
 
 const SectionInfo = styled.section`
@@ -59,10 +70,11 @@ function Main(props) {
       <SectionInfo>
         <p className="p1">Hi! how are you?</p>
         <p className="p2">
-          <p>I'm </p>
+          <p>I'm</p>
+          &nbsp;
           <Typewriter
             options={{
-              strings: ["JunWoo Cheon", "Web Developer"],
+              strings: [" JunWoo Cheon", " Web Developer"],
               autoStart: true,
               loop: true,
             }}

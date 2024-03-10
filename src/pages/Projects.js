@@ -49,6 +49,11 @@ const ContentBox = styled.section`
     margin: 50px 10px;
     border: 1px solid #eee;
     color: #fff;
+    transition: 0.2s;
+    &:hover {
+      border: 1px solid #ffb400;
+      scale: calc(1.03);
+    }
     img {
       width: 450px;
       height: 270px;

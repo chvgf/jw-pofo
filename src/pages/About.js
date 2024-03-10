@@ -6,10 +6,6 @@ import HTML from "../imges/HTML";
 import { AWS, CSS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB } from "../imges";
 
 const AboutWrapper = styled.main`
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
   display: flex;
   align-items: center;
   justify-content: center;
