@@ -1,37 +1,64 @@
 import React from "react";
 import styled from "styled-components";
+import { GONIMINTON, MYMUNG } from "../imges";
 
 const ProjectsWrapper = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 70%;
+  max-width: 1100px;
+  padding: 4rem 2rem 2rem;
+  margin: 0 auto;
 `;
 const Title = styled.div`
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h1 {
     font-size: 60px;
     font-weight: 700;
     margin: 30px 0;
     text-align: center;
   }
+  h3 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h4 {
+    font-size: 30px;
+    text-align: center;
+  }
 `;
 const ContentBox = styled.section`
-  background-color: bisque;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 888px;
-  margin: 30px 0;
-  div {
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  .contentItem {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 200px;
-    height: 150px;
-    margin: 20px 10px;
-    background-color: #000;
-    border: 1px solid blue;
+    border-radius: 10px;
+    width: 850px;
+    height: 350px;
+    margin: 50px 10px;
+    border: 1px solid #eee;
     color: #fff;
+    img {
+      width: 500px;
+      height: 300px;
+      margin-right: 20px;
+    }
+    p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
   }
 `;
 
@@ -39,12 +66,33 @@ function Projects(props) {
   return (
     <ProjectsWrapper>
       <Title>
-        <h1>제모ㅓ모모모곡</h1>
+        <h1>Projects</h1>
       </Title>
       <ContentBox>
-        <div>프로젝트1</div>
-        <div>프로젝트2</div>
-        <div>프로젝트3</div>
+        <div className="contentItem">
+          <img src={GONIMINTON} />
+          <div>
+            <p>설명aaaaaaaaaaaaaaa</p>
+            <p>설명</p>
+            <p>설명</p>
+          </div>
+        </div>
+        <div className="contentItem">
+          <img src={MYMUNG} />
+          <div>
+            <p>설명aaaaaaaaaaaaaaa</p>
+            <p>설명</p>
+            <p>설명</p>
+          </div>
+        </div>
+        <div className="contentItem">
+          <img src={GONIMINTON} />
+          <div>
+            <p>설명aaaaaaaaaaaaaaa</p>
+            <p>설명</p>
+            <p>설명</p>
+          </div>
+        </div>
       </ContentBox>
     </ProjectsWrapper>
   );

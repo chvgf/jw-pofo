@@ -7,13 +7,13 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 const GlobalStyle = createGlobalStyle`
-      ${reset}
+${reset}
     *{
       background-color: #222;
+      color: #fff;
     }
     body {
       box-sizing: border-box;
-      overflow: hidden;
     }
     `;
 

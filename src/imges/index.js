@@ -1,0 +1,16 @@
+export const CSS = require("./CSS.3.svg.png");
+export const JS = require("./Javascript_Logo.png");
+export const REACT = require("./REACT.png");
+export const REDUX = require("./react-redux.png");
+export const NEXTJS = require("./nextjs.png");
+export const NODEJS = require("./Node.png");
+export const EXPRESSJS = require("./express.png");
+export const MONGODB = require("./mongoDB.png");
+export const AWS = require("./aws.png");
+export const NETLIFY = require("./netlify.png");
+export const CLOUDTYPE = require("./cloudtype.png");
+export const TRELLO = require("./Trello-Logo.png");
+export const FIGMA = require("./figma.png");
+export const GITHUB = require("./GitHub-logo.png");
+export const GONIMINTON = require("./goniminton.PNG");
+export const MYMUNG = require("./myMung.PNG");
