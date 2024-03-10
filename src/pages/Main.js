@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import mainImg from "../imges/cjw1.jpg";
 import Typewriter from "typewriter-effect";
+import { AnimatePresence } from "framer-motion";
 
 const MainWrapper = styled.div`
   display: flex;

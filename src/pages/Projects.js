@@ -83,15 +83,7 @@ function Projects(props) {
           <div>
             <p>
               <span>고니민턴: </span>
-              초보 견주들이 강아지를 올바르게 키울 수 있도록
-              <br />
-              맞춤 서비스를 제공하고,
-              <br />
-              같은 고민을 하는 사람들을 위한 웹입니다.
-              <br />
-              주요 기능으로는 자신의 강아지 기입 시
-              <br />
-              품종및 나이등에 맞추어 사료와 물품이 추천됩니다.
+              배드민턴 칠라고 만든겨
             </p>
             <p>
               <a href="https://goniminton.netlify.app/">
