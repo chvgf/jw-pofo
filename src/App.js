@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "./pages/Main";
 import { createGlobalStyle } from "styled-components";
-import Header from "./components/Header";
 import reset from "styled-reset";
+
+import Main from "./pages/Main";
+import Header from "./components/Header";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 

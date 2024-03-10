@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { MdHome, MdPerson, MdAssignment } from "react-icons/md";
+import { AiFillGithub } from "react-icons/ai";
 
 const HeaderWrapper = styled.div`
   position: absolute;
@@ -16,6 +18,7 @@ const HeaderWrapper = styled.div`
   background-color: antiquewhite;
   li {
     ul {
+      font-size: 40px;
       margin: 20px 0;
       color: #000;
       font-weight: 700;
@@ -23,6 +26,9 @@ const HeaderWrapper = styled.div`
       &:hover {
         color: blue;
         transition: 0.2s;
+        width: 200px;
+        background-color: yellow;
+        border-radius: 33px;
       }
     }
   }
@@ -40,25 +46,25 @@ function Header(props) {
                 navigate("/");
               }}
             >
-              Home
+              <MdHome />
             </ul>
             <ul
               onClick={() => {
                 navigate("/about");
               }}
             >
-              ABOUT
+              <MdPerson />
             </ul>
             <ul
               onClick={() => {
                 navigate("/projects");
               }}
             >
-              PROJECTS
+              <MdAssignment />
             </ul>
             <ul>
-              <a href="https://github.com/" target="blank">
-                GITHUB
+              <a href="https://github.com/chvgf/" target="blank">
+                <AiFillGithub />
               </a>
             </ul>
           </li>
