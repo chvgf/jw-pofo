@@ -8,27 +8,27 @@ const HeaderWrapper = styled.div`
   position: absolute;
   height: 100%;
   left: 10px;
-  border-right: 1px solid gray;
-  font-family: "Teko", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
-  background-color: antiquewhite;
   li {
     ul {
       font-size: 40px;
       margin: 20px 0;
-      color: #000;
+      color: #fff;
       font-weight: 700;
       cursor: pointer;
-      &:hover {
-        color: blue;
-        transition: 0.2s;
-        width: 200px;
-        background-color: yellow;
+      .icon {
+        background-color: #ffb400;
         border-radius: 33px;
+        &:hover {
+          transition: 0.2s;
+          width: 200px;
+          background-color: #ffb400;
+          border-radius: 33px;
+        }
       }
     }
   }
@@ -46,25 +46,25 @@ function Header(props) {
                 navigate("/");
               }}
             >
-              <MdHome />
+              <MdHome className="icon" />
             </ul>
             <ul
               onClick={() => {
                 navigate("/about");
               }}
             >
-              <MdPerson />
+              <MdPerson className="icon" />
             </ul>
             <ul
               onClick={() => {
                 navigate("/projects");
               }}
             >
-              <MdAssignment />
+              <MdAssignment className="icon" />
             </ul>
             <ul>
               <a href="https://github.com/chvgf/" target="blank">
-                <AiFillGithub />
+                <AiFillGithub className="icon" />
               </a>
             </ul>
           </li>

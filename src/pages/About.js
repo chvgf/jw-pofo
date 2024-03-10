@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-// import { BsPersonLinesFill } from "react-icons/bs";
 import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
-// import { aws } from "../imges";
+import { AWS } from "../imges";
 
 const AboutWrapper = styled.main`
   display: flex;
@@ -106,7 +105,9 @@ function About(props) {
         </div>
         <h3>SKILLS</h3>
         <ContentBox>
-          <div>기술1</div>
+          <div>
+            <img className="img" src={AWS} alt="AWS" />
+          </div>
           <div>2</div>
           <div>3</div>
           <div>4</div>
