@@ -77,7 +77,8 @@ function Projects(props) {
           <img src={GONIMINTON} />
           <div>
             <p>
-              <span>고니민턴: </span> 초보 견주들이 강아지를 올바르게 키울 수 있도록
+              <span>고니민턴: </span>
+              초보 견주들이 강아지를 올바르게 키울 수 있도록
               <br />
               맞춤 서비스를 제공하고,
               <br />
@@ -103,7 +104,8 @@ function Projects(props) {
           <img src={MYMUNG} />
           <div>
             <p>
-              <span>마이멍: </span> 초보 견주들이 강아지를 올바르게 키울 수 있도록
+              <span>마이멍: </span>
+              초보 견주들이 강아지를 올바르게 키울 수 있도록
               <br />
               맞춤 서비스를 제공하고,
               <br />

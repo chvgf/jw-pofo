@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import mainImg from "../imges/cjw1.jpg";
+import Typewriter from "typewriter-effect";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ const SectionInfo = styled.section`
     margin: 10px 0;
     line-height: 30px;
     letter-spacing: 1px;
+    display: flex;
     span {
       color: #ffb400;
     }
@@ -57,10 +59,14 @@ function Main(props) {
       <SectionInfo>
         <p className="p1">Hi! how are you?</p>
         <p className="p2">
-          I'm <span>JunWoo Cheon</span>
-        </p>
-        <p className="p2">
-          I'm <span>Web Developer</span>
+          <p>I'm </p>
+          <Typewriter
+            options={{
+              strings: ["JunWoo Cheon", "Web Developer"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </p>
         <p className="p3">
           안녕하세요, 저는 천준우입니다. 😀
