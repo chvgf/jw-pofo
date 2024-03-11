@@ -22,9 +22,9 @@ const HeaderWrapper = styled.header`
     font-family: monospace;
   }
   li {
+    list-style-type: none;
     ul {
-      /* position: absolute; */
-      font-size: 40px;
+      font-size: 44px;
       margin: 20px 0;
       color: #fff;
       font-weight: 700;
