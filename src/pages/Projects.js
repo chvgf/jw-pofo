@@ -79,6 +79,7 @@ function Projects(props) {
       </Title>
       <ContentBox>
         <div className="contentItem">
+          {/* 고니민턴 */}
           <img src={GONIMINTON} />
           <div>
             <p>
@@ -98,6 +99,7 @@ function Projects(props) {
           </div>
         </div>
         <div className="contentItem">
+          {/* 마이멍 */}
           <img src={MYMUNG} />
           <div>
             <p>
@@ -113,18 +115,19 @@ function Projects(props) {
               품종및 나이등에 맞추어 사료와 물품이 추천됩니다.
             </p>
             <p>
-              <a href="https://goniminton.netlify.app/">
-                <span>URL:</span> https://goniminton.netlify.app
+              <a href="https://jwc-mymung.netlify.app/">
+                <span>URL:</span> https://jwc-mymung.netlify.app
               </a>
             </p>
             <p>
-              <a href="https://github.com/chvgf/teamstrong1000">
+              <a href="https://github.com/chvgf/finalProject">
                 <span>Github:</span> https://github.com/chvgf/finalProject
               </a>
             </p>
           </div>
         </div>
         <div className="contentItem">
+          {/* 포폴사이트 */}
           <img src={GONIMINTON} />
           <div>
             <p>설명aaaaaaaaaaaaaaa</p>
