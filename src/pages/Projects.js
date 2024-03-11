@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GONIMINTON, MYMUNG } from "../imges";
+import { GONIMINTON, MYMUNG, POFO } from "../imges";
 
 const ProjectsWrapper = styled.main`
   display: flex;
@@ -84,15 +84,23 @@ function Projects(props) {
           <div>
             <p>
               <span>고니민턴: </span>
-              배드민턴 칠라고 만든겨
+              배드민턴을 치는 사람들이 보다 쉽게 게임 매칭을 하고,
+              <br />
+              운동을 게임처럼 즐길 수 있도록 컨텐츠를 제공하는
+              <br />
+              커뮤니티 웹입니다.
+              <br />
+              주요 기능으로는 실력별 유저간 랜덤 매칭과,
+              <br />
+              유저간의 커뮤니티입니다.
             </p>
             <p>
-              <a href="https://goniminton.netlify.app/">
+              <a href="https://goniminton.netlify.app/" target="blank">
                 <span>URL:</span> https://goniminton.netlify.app
               </a>
             </p>
             <p>
-              <a href="https://github.com/chvgf/teamstrong1000">
+              <a href="https://github.com/chvgf/teamstrong1000" target="blank">
                 <span>Github:</span> https://github.com/chvgf/teamstrong1000
               </a>
             </p>
@@ -115,12 +123,12 @@ function Projects(props) {
               품종및 나이등에 맞추어 사료와 물품이 추천됩니다.
             </p>
             <p>
-              <a href="https://jwc-mymung.netlify.app/">
+              <a href="https://jwc-mymung.netlify.app/" target="blank">
                 <span>URL:</span> https://jwc-mymung.netlify.app
               </a>
             </p>
             <p>
-              <a href="https://github.com/chvgf/finalProject">
+              <a href="https://github.com/chvgf/finalProject" target="blank">
                 <span>Github:</span> https://github.com/chvgf/finalProject
               </a>
             </p>
@@ -128,17 +136,17 @@ function Projects(props) {
         </div>
         <div className="contentItem">
           {/* 포폴사이트 */}
-          <img src={GONIMINTON} />
+          <img src={POFO} />
           <div>
-            <p>설명aaaaaaaaaaaaaaa</p>
+            <p>천준우 포트폴리오 사이트</p>
             <p>
-              <a href="https://goniminton.netlify.app/">
-                <span>URL:</span> https://goniminton.netlify.app
+              <a href="https://jwc-portfolio.netlify.app/" target="blank">
+                <span>URL:</span> https://jwc-portfolio.netlify.app
               </a>
             </p>
             <p>
-              <a href="https://github.com/chvgf/teamstrong1000">
-                <span>Github:</span> https://github.com/chvgf/teamstrong1000
+              <a href="https://github.com/chvgf/jw-pofo" target="blank">
+                <span>Github:</span> https://github.com/chvgf/jw-pofo
               </a>
             </p>
           </div>
