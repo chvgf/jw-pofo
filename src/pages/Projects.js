@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GONIMINTON, MYMUNG, POFO } from "../imges";
 
@@ -72,8 +72,20 @@ const ContentBox = styled.section`
 `;
 
 function Projects(props) {
+  let a = "inTest";
+  let b = "outTest";
+  let c = "timeOut1";
+  let d = "timeOut2";
+  const [pageAni, setPageAni] = useState(false);
+  const [timeOut, setTimeOut] = useState(false);
+  setTimeout(() => {
+    setTimeOut(true);
+  }, 200);
+  useEffect(() => {
+    setPageAni(true);
+  }, []);
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper className={`${timeOut ? d : c}`}>
       <Title>
         <h1>Projects</h1>
       </Title>
@@ -152,6 +164,7 @@ function Projects(props) {
           </div>
         </div>
       </ContentBox>
+      <div className={`${pageAni ? a : b}`}></div>
     </ProjectsWrapper>
   );
 }

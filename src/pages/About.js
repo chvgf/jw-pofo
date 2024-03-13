@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import HTML from "../imges/HTML";
 import { AWS, CSS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB } from "../imges";
+import { useLocation } from "react-router-dom";
 
 const AboutWrapper = styled.main`
   display: flex;
@@ -129,8 +130,22 @@ const ContentBox = styled.section`
 `;
 
 function About(props) {
+  let a = "inTest";
+  let b = "outTest";
+  let c = "timeOut1";
+  let d = "timeOut2";
+  const [pageAni, setPageAni] = useState(false);
+  const [timeOut, setTimeOut] = useState(false);
+  setTimeout(() => {
+    setTimeOut(true);
+  }, 200);
+  useEffect(() => {
+    setPageAni(true);
+  }, []);
+  const loc = useLocation();
+  // console.log(loc);
   return (
-    <AboutWrapper>
+    <AboutWrapper className={`${timeOut ? d : c}`}>
       <div className="aboutBox">
         <Title>
           <h1>ABOUT ME</h1>
@@ -249,6 +264,7 @@ function About(props) {
           </ContentBox>
         </Title>
       </div>
+      <div className={`${pageAni ? a : b}`}></div>
     </AboutWrapper>
   );
 }

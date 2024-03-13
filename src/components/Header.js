@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { MdHome, MdPerson, MdAssignment } from "react-icons/md";
@@ -50,9 +50,15 @@ const HeaderWrapper = styled.header`
 
 function Header(props) {
   const navigate = useNavigate();
+  let c = "timeOut1";
+  let d = "timeOut2";
+  const [timeOut, setTimeOut] = useState(false);
+  setTimeout(() => {
+    setTimeOut(true);
+  }, 100);
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper className={`${timeOut ? d : c}`}>
         {/* <h4>천준우</h4> */}
         <li>
           <ul
