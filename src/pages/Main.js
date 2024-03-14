@@ -60,11 +60,14 @@ function Main(props) {
   let d = "timeOut2";
   const [pageAni, setPageAni] = useState(false);
   const [timeOut, setTimeOut] = useState(false);
+
   setTimeout(() => {
     setTimeOut(true);
   }, 200);
+
   useEffect(() => {
     setPageAni(true);
+    window.localStorage.removeItem("proUrl");
   }, []);
 
   return (

@@ -4,7 +4,6 @@ import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import HTML from "../imges/HTML";
 import { AWS, CSS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB } from "../imges";
-import { useLocation } from "react-router-dom";
 
 const AboutWrapper = styled.main`
   display: flex;
@@ -136,14 +135,15 @@ function About(props) {
   let d = "timeOut2";
   const [pageAni, setPageAni] = useState(false);
   const [timeOut, setTimeOut] = useState(false);
+
   setTimeout(() => {
     setTimeOut(true);
   }, 200);
+
   useEffect(() => {
     setPageAni(true);
   }, []);
-  const loc = useLocation();
-  // console.log(loc);
+
   return (
     <AboutWrapper className={`${timeOut ? d : c}`}>
       <div className="aboutBox">
@@ -264,7 +264,8 @@ function About(props) {
           </ContentBox>
         </Title>
       </div>
-      <div className={`${pageAni ? a : b}`}></div>
+      {<div className={`${window.localStorage.getItem("proUrl") ? (pageAni ? b : a) : pageAni ? a : b}`}></div>}
+      {/* <div className={`${pageAni ? b : a}`}></div> */}
     </AboutWrapper>
   );
 }
