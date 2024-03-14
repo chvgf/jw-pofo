@@ -83,7 +83,7 @@ function Header(props) {
             }}
           >
             <MdAssignment className="icon" />
-            <span>projects</span>
+            <span>Projects</span>
           </ul>
           <ul>
             <a href="https://github.com/chvgf/" target="blank">
