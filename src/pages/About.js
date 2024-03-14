@@ -94,6 +94,9 @@ const Title = styled.div`
     font-weight: 700;
     margin: 30px 0;
     text-align: center;
+    span {
+      color: #ffb400;
+    }
   }
   h3 {
     font-size: 40px;
@@ -135,8 +138,11 @@ function About(props) {
   let b = "outTest";
   let c = "timeOut1";
   let d = "timeOut2";
+  let e = "titleAni1";
+  let f = "titleAni2";
   const [pageAni, setPageAni] = useState(false);
   const [timeOut, setTimeOut] = useState(false);
+  const [TitleAni, setTitleAni] = useState(false);
 
   setTimeout(() => {
     setTimeOut(true);
@@ -144,6 +150,7 @@ function About(props) {
 
   useEffect(() => {
     setPageAni(true);
+    setTitleAni(true);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -155,7 +162,9 @@ function About(props) {
       <Header />
       <div className="aboutBox">
         <Title className={`${timeOut ? d : c}`}>
-          <h1>ABOUT ME</h1>
+          <h1 className={`${TitleAni ? f : e}`}>
+            ABOUT <span>ME</span>
+          </h1>
           <div className="info">
             <div className="infoBox">
               <div className="icon">

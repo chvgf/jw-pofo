@@ -22,6 +22,9 @@ const Title = styled.div`
     font-weight: 700;
     margin: 30px 0;
     text-align: center;
+    span {
+      color: #ffb400;
+    }
   }
   h3 {
     font-size: 40px;
@@ -77,8 +80,11 @@ function Projects(props) {
   let b = "outTest";
   let c = "timeOut1";
   let d = "timeOut2";
+  let e = "titleAni1";
+  let f = "titleAni2";
   const [pageAni, setPageAni] = useState(false);
   const [timeOut, setTimeOut] = useState(false);
+  const [TitleAni, setTitleAni] = useState(false);
 
   setTimeout(() => {
     setTimeOut(true);
@@ -86,6 +92,7 @@ function Projects(props) {
 
   useEffect(() => {
     setPageAni(true);
+    setTitleAni(true);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -99,7 +106,9 @@ function Projects(props) {
     <ProjectsWrapper>
       <Header />
       <Title className={`${timeOut ? d : c}`}>
-        <h1>Projects</h1>
+        <h1 className={`${TitleAni ? f : e}`}>
+          MY <span>PROJECTS</span>
+        </h1>
       </Title>
       <ContentBox className={`${timeOut ? d : c}`}>
         <div className="contentItem">
