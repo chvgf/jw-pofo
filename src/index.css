@@ -18,7 +18,7 @@ code {
   left: 0;
   top: -666px;
   transition: 1.3s;
-  background-color: #333;
+  background-color: #222;
   opacity: 0.9;
   border-top: 2px solid #ffb400;
   overflow-x: hidden;
@@ -31,7 +31,7 @@ code {
   left: 0;
   top: 110%;
   transition: 1.3s;
-  background-color: #333;
+  background-color: #222;
   opacity: 0.9;
   border-top: 2px solid #ffb400;
   overflow-x: hidden;
