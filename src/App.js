@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      {/* <Header /> */}
       <Routes location={location}>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />

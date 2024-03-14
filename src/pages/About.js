@@ -4,16 +4,18 @@ import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import HTML from "../imges/HTML";
 import { AWS, CSS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB } from "../imges";
+import Header from "../components/Header";
 
 const AboutWrapper = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+
   .aboutBox {
     width: 70%;
     max-width: 1100px;
     padding: 4rem 2rem 2rem;
+    text-align: center;
     h3 {
       font-size: 48px;
       font-family: "GongGothicBold";
@@ -138,7 +140,7 @@ function About(props) {
 
   setTimeout(() => {
     setTimeOut(true);
-  }, 200);
+  }, 500);
 
   useEffect(() => {
     setPageAni(true);
@@ -149,9 +151,10 @@ function About(props) {
   }, []);
 
   return (
-    <AboutWrapper className={`${timeOut ? d : c}`}>
+    <AboutWrapper>
+      <Header />
       <div className="aboutBox">
-        <Title>
+        <Title className={`${timeOut ? d : c}`}>
           <h1>ABOUT ME</h1>
           <div className="info">
             <div className="infoBox">

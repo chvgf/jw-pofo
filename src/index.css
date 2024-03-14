@@ -21,7 +21,7 @@ code {
   opacity: 0.9;
   border-top: 2px solid #ffb400;
   overflow-x: hidden;
-  z-index: 2;
+  z-index: 12;
 }
 .outTest {
   width: 100vw;
@@ -34,13 +34,13 @@ code {
   opacity: 0.9;
   border-top: 2px solid #ffb400;
   overflow-x: hidden;
-  z-index: 2;
+  z-index: 12;
 }
-/* .timeOut1 {
-  opacity: 0.5;
+.timeOut1 {
+  opacity: 0;
   transition: 1s;
 }
 .timeOut2 {
   opacity: 1;
   transition: 1s;
-} */
+}

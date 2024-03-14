@@ -2,12 +2,12 @@ import styled from "styled-components";
 import mainImg from "../imges/cjw1.jpg";
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
 
 const MainWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 100px; */
 `;
 
 const SectionInfo = styled.section`
@@ -63,7 +63,7 @@ function Main(props) {
 
   setTimeout(() => {
     setTimeOut(true);
-  }, 200);
+  }, 500);
 
   useEffect(() => {
     setPageAni(true);
@@ -75,8 +75,9 @@ function Main(props) {
   }, []);
 
   return (
-    <MainWrapper className={`${timeOut ? d : c}`}>
-      <SectionInfo>
+    <MainWrapper>
+      <Header />
+      <SectionInfo className={`${timeOut ? d : c}`}>
         <p className="p1">Hi! how are you?</p>
         <p className="p2">
           <p>I'm</p>
@@ -99,7 +100,7 @@ function Main(props) {
           맡은 일에 자부심을 갖고 도전을 경험할 수 있는 회사에서 일하고 싶습니다!
         </p>
       </SectionInfo>
-      <SectionImg>
+      <SectionImg className={`${timeOut ? d : c}`}>
         <img src={mainImg}></img>
       </SectionImg>
       <div className={`${pageAni ? b : a}`}></div>

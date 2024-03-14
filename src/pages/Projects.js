@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GONIMINTON, MYMUNG, POFO } from "../imges";
+import Header from "../components/Header";
 
 const ProjectsWrapper = styled.main`
   display: flex;
@@ -81,7 +82,7 @@ function Projects(props) {
 
   setTimeout(() => {
     setTimeOut(true);
-  }, 200);
+  }, 500);
 
   useEffect(() => {
     setPageAni(true);
@@ -95,11 +96,12 @@ function Projects(props) {
   window.localStorage.setItem("proUrl", currentUrl);
 
   return (
-    <ProjectsWrapper className={`${timeOut ? d : c}`}>
-      <Title>
+    <ProjectsWrapper>
+      <Header />
+      <Title className={`${timeOut ? d : c}`}>
         <h1>Projects</h1>
       </Title>
-      <ContentBox>
+      <ContentBox className={`${timeOut ? d : c}`}>
         <div className="contentItem">
           {/* 고니민턴 */}
           <img src={GONIMINTON} />

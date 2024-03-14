@@ -8,12 +8,14 @@ const HeaderWrapper = styled.header`
   position: fixed;
   height: 100%;
   left: 10px;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
   width: 200px;
+  z-index: 10;
   h4 {
     position: absolute;
     top: 25%;
@@ -55,7 +57,7 @@ function Header(props) {
   const [timeOut, setTimeOut] = useState(false);
   setTimeout(() => {
     setTimeOut(true);
-  }, 100);
+  }, 400);
   return (
     <>
       <HeaderWrapper className={`${timeOut ? d : c}`}>
