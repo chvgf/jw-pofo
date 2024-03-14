@@ -85,10 +85,13 @@ function Projects(props) {
 
   useEffect(() => {
     setPageAni(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const currentUrl = window.location.href;
-  // console.log(currentUrl);
   window.localStorage.setItem("proUrl", currentUrl);
 
   return (

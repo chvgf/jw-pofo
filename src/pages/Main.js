@@ -68,6 +68,10 @@ function Main(props) {
   useEffect(() => {
     setPageAni(true);
     window.localStorage.removeItem("proUrl");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
