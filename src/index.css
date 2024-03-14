@@ -48,7 +48,7 @@ code {
   transition: 1s;
 }
 
-/* 페이지 이동 시 글씨 애니메이션 */
+/* 페이지 이동 시 타이틀 애니메이션 */
 .titleAni1 {
   letter-spacing: 88px;
   transition: 1.7s;
