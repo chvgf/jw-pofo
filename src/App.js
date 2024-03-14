@@ -10,7 +10,7 @@ import "./index.css";
 const GlobalStyle = createGlobalStyle`
 ${reset}
     *{
-      background-color: #222;
+      background-color: #111;
       color: #fff;
     }
     body {
