@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import mainImg from "../imges/cjw1.jpg";
+import mainImg from "../imges/KakaoTalk_20240322_145101338.jpg";
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
