@@ -16,6 +16,10 @@ const HeaderWrapper = styled.header`
   padding: 10px 50px;
   width: 200px;
   z-index: 10;
+  background-color: transparent;
+  @media (max-width: 1550px) {
+    left: -90px;
+  }
   h4 {
     position: absolute;
     top: 25%;
@@ -25,26 +29,44 @@ const HeaderWrapper = styled.header`
   }
   li {
     list-style-type: none;
+    background-color: transparent;
+
     ul {
       font-size: 44px;
       margin: 20px 0;
       color: #fff;
       font-weight: 700;
+      background-color: transparent;
+      a {
+        background-color: transparent;
+      }
+      @media (max-width: 1550px) {
+        font-size: 30px;
+      }
       cursor: pointer;
       .icon {
         background-color: #ffb400;
         border-radius: 33px;
         transition: 0.2s;
+
         &:hover {
           width: 66px;
           height: 66px;
           background-color: #ffb400;
           border-radius: 33px;
+          @media (max-width: 1550px) {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
       span {
         font-size: 24px;
         margin-left: 10px;
+        background-color: transparent;
+        @media (max-width: 1550px) {
+          font-size: 10px;
+        }
       }
     }
   }

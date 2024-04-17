@@ -8,6 +8,10 @@ const MainWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
 `;
 
 const SectionInfo = styled.section`
@@ -18,11 +22,34 @@ const SectionInfo = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1350px) {
+    width: 450px;
+    height: 100vh;
+  }
+  @media (max-width: 1200px) {
+    width: 350px;
+    height: 100vh;
+  }
+  @media (max-width: 1200px) {
+    width: 350px;
+    height: 100vh;
+  }
+  @media (max-width: 1100px) {
+    width: 300px;
+    height: 100vh;
+  }
+  @media (max-width: 1000px) {
+    height: 50vh;
+  }
+
   .p1 {
     font-size: 26px;
     margin: 30px 0;
     line-height: 30px;
     letter-spacing: 1px;
+    @media (max-width: 1350px) {
+      font-size: 20px;
+    }
   }
   .p2 {
     font-size: 36px;
@@ -30,6 +57,9 @@ const SectionInfo = styled.section`
     line-height: 30px;
     letter-spacing: 1px;
     display: flex;
+    @media (max-width: 1350px) {
+      font-size: 20px;
+    }
     span {
       color: #ffb400;
     }
@@ -39,6 +69,9 @@ const SectionInfo = styled.section`
     margin: 30px 0;
     line-height: 30px;
     letter-spacing: 1px;
+    @media (max-width: 1350px) {
+      font-size: 15px;
+    }
   }
 `;
 const SectionImg = styled.section`
@@ -48,8 +81,15 @@ const SectionImg = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1000px) {
+    height: 30vh;
+  }
+
   img {
-    height: 50vh;
+    height: auto;
+    @media (max-width: 1000px) {
+      width: 250px;
+    }
   }
 `;
 
