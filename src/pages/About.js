@@ -15,15 +15,8 @@ const AboutWrapper = styled.main`
     width: 70%;
     max-width: 1100px;
     padding: 4rem 2rem 2rem;
+    justify-content: center;
     text-align: center;
-    h3 {
-      font-size: 48px;
-      font-family: "GongGothicBold";
-      text-decoration: underline 1px;
-      text-underline-offset: 20px;
-      padding: 10px 0;
-      margin-bottom: 60px;
-    }
     ul {
       width: 70%;
       padding: 30px 0;
@@ -55,9 +48,9 @@ const AboutWrapper = styled.main`
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      padding: 30px;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
     }
     .info > .infoBox {
       width: 330px;
@@ -71,16 +64,69 @@ const AboutWrapper = styled.main`
       box-shadow: rgba(149, 160, 165, 0.4) 0px 8px 24px;
       border-radius: 20px;
       margin: 14px;
-
       .icon {
         font-size: 40px;
       }
       .content {
         font-family: "GongGothicBold";
       }
+
       .text {
-        font-size: 16px;
+        font-size: 14px;
         font-family: "GongGothicMedium";
+      }
+    }
+    // skill
+    .info > .skillInfoBox {
+      width: 200px;
+      height: 280px;
+      min-width: 245px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 15px;
+      box-shadow: rgba(149, 160, 165, 0.4) 0px 8px 24px;
+      border-radius: 20px;
+      margin: 12px;
+      &:hover {
+        scale: 1.1;
+        transition: 0.2s ease-out;
+      }
+
+      .icon {
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        .img {
+          width: 65px;
+          height: 65px;
+          border-radius: 15px;
+        }
+        span {
+          color: #ffb400;
+          font-size: 15px;
+        }
+      }
+      .skillContent {
+        text-align: left;
+      }
+      .skillTextbox {
+        display: flex;
+        margin: 15px 0;
+      }
+      .skillTextbox::before {
+        content: "ㅡ";
+        margin: 0 10px;
+        color: #ffb400;
+      }
+      .skillText {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        font-weight: 300;
       }
     }
   }
@@ -101,11 +147,15 @@ const Title = styled.div`
   h3 {
     font-size: 40px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    text-decoration: underline 1px;
+    text-underline-offset: 20px;
   }
   h4 {
     font-size: 30px;
     text-align: center;
+    margin: 60px 0 15px 0;
   }
 `;
 const ContentBox = styled.section`
@@ -127,8 +177,8 @@ const ContentBox = styled.section`
     border: 1px solid #eee;
     color: #fff;
     .img {
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: auto;
     }
   }
 `;
@@ -217,43 +267,144 @@ function About(props) {
               </div>
             </div>
           </div>
-
+          {/* skill */}
           <h3>SKILLS</h3>
           <br />
           <br />
-          <h4>FrontEnd</h4>
-          <ContentBox>
-            <div>
-              <HTML className="img" alt="HTML" />
+          {/* Frontend */}
+          <h4>Frontend</h4>
+          <div className="info">
+            {/* html */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <HTML className="img" alt="HTML" />
+                <span>&nbsp;:HTML/CSS</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> 원하는 UI를 실용적이고, 익숙하게 만들어낼 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 시멘틱 태그를 활용한 명시적인 구조의 설계가 가능합니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 최신 css 문법을 숙지하여 트렌디한 UI를 만들 수 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={CSS} alt="CSS" />
+            {/* js */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={JS} alt="JS" />
+                <span>&nbsp;:Javascript</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> ES6와 최신의 자바스크립트 문법을 사용할 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> jQuery등을 사용하지 않고 Vanilla Js 의 웹 제작이 가능합니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 여러가지 메서드 활용을 통한 간결하고 직관적인 코딩이 가능합니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={JS} alt="JS" />
+            {/* react */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={REACT} alt="REACT" />
+                <span>&nbsp;:React</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> 컴포넌트의 생명주기와 속성을 이해하여 활용할 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 다양한 훅 사용을 통한 여러가지 방식의 react활용이 가능합니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> Component를 자유롭게 나눌 수 있으며 props의 흐름을 이해하고 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={REACT} alt="REACT" />
+            {/* redux */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={REDUX} alt="REDUX" />
+                <span>&nbsp;:rdeux</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> Redux Store를 통해 전역 상태 관리를 할 수 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={REDUX} alt="REDUX" />
+            {/* nextJs */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={NEXTJS} alt="NEXTJS" />
+                <span>:Next.js</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> SSR 방식의 서버 렌더링을 활용하여 검색엔진을 최적화 시킬 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 파일 시스템 기반의 라우팅 구조를 이해하여 쉽게 페이지를 생성, 관리할 수 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={NEXTJS} alt="NEXTJS" />
-            </div>
-          </ContentBox>
+          </div>
+          {/* Backend */}
           <h4>Backend</h4>
-          <ContentBox>
-            <div>
-              <img className="img" src={NODEJS} alt="NODEJS" />
+          <div className="info">
+            {/* Node.js */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={NODEJS} alt="NODEJS" />
+                <span>&nbsp;:Node.js</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> 모델, 라우터, 컨트롤러, 서비스를 나누어 구조화된 서버를 만들 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> Js를 활용한 Node.js 의 작동 방식을 이해하고 활용할 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> ejs 문법을 사용할 수 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={EXPRESSJS} alt="EXPRESSJS" />
+            {/* Express.js */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={EXPRESSJS} alt="EXPRESSJS" />
+                <span>&nbsp;:Express.js</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> Express 프레임워크를 활용하여 Restful API 서버를 만들 수 있습니다.</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img className="img" src={MONGODB} alt="MONGODB" />
+            {/* MongoDb */}
+            <div className="skillInfoBox">
+              <div className="icon">
+                <img className="img" src={MONGODB} alt="MONGODB" />
+                <span>&nbsp;:MongoDB</span>
+              </div>
+              <div className="skillContent">
+                <div className="skillTextbox">
+                  <span className="skillText"> NoSQL을 이해하고 MongoDB Atlas를 사용 할 수 있습니다.</span>
+                </div>
+                <div className="skillTextbox">
+                  <span className="skillText"> 비교,논리,쿼리 연산자등을 활용하여 데이터를 서버에 업데이트할 수 있습니다. </span>
+                </div>
+              </div>
             </div>
-          </ContentBox>
+          </div>
           <h4>Deployment</h4>
           <ContentBox>
             <div>
