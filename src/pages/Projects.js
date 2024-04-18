@@ -54,6 +54,11 @@ const ContentBox = styled.section`
     border: 1px solid #eee;
     color: #fff;
     transition: 0.2s;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      width: 100%;
+      height: 700px;
+    }
     &:hover {
       border: 1px solid #ffb400;
       scale: calc(1.03);
