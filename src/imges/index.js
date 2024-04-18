@@ -12,6 +12,7 @@ export const CLOUDTYPE = require("./cloudtype.png");
 export const TRELLO = require("./Trello-Logo.png");
 export const FIGMA = require("./figma.png");
 export const GITHUB = require("./GitHub-logo.png");
+export const GITHUB2 = require("./github-logo2.png");
 export const GONIMINTON = require("./goniminton.PNG");
 export const MYMUNG = require("./myMung.PNG");
 export const POFO = require("./pofo.PNG");

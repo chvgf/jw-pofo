@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import HTML from "../imges/HTML";
-import { AWS, CSS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB } from "../imges";
+import { AWS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB, GITHUB2 } from "../imges";
 import Header from "../components/Header";
 
 const AboutWrapper = styled.main`
@@ -92,6 +92,7 @@ const AboutWrapper = styled.main`
       &:hover {
         scale: 1.1;
         transition: 0.2s ease-out;
+        box-shadow: rgba(255, 180, 0, 0.4) 0px 8px 24px;
       }
 
       .icon {
@@ -129,6 +130,35 @@ const AboutWrapper = styled.main`
         font-weight: 300;
       }
     }
+    .info > .skillInfoBox2 {
+      width: 200px;
+      height: 120px;
+      min-width: 245px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 15px;
+      box-shadow: rgba(149, 160, 165, 0.4) 0px 8px 24px;
+      border-radius: 20px;
+      margin: 12px;
+      &:hover {
+        scale: 1.1;
+        transition: 0.2s ease-out;
+        box-shadow: rgba(255, 180, 0, 0.4) 0px 8px 24px;
+      }
+      .icon {
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          width: 100px;
+          height: auto;
+          border-radius: 15px;
+        }
+      }
+    }
   }
 `;
 const Title = styled.div`
@@ -156,30 +186,6 @@ const Title = styled.div`
     font-size: 30px;
     text-align: center;
     margin: 60px 0 15px 0;
-  }
-`;
-const ContentBox = styled.section`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 888px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    width: 200px;
-    height: 150px;
-    margin: 20px 10px;
-    border: 1px solid #eee;
-    color: #fff;
-    .img {
-      width: 100px;
-      height: auto;
-    }
   }
 `;
 
@@ -405,30 +411,46 @@ function About(props) {
               </div>
             </div>
           </div>
-          <h4>Deployment</h4>
-          <ContentBox>
-            <div>
-              <img className="img" src={AWS} alt="AWS" />
+          {/* Deployment/Cooperation */}
+          <h4>Deployment/Cooperation</h4>
+          <div className="info">
+            {/* AWS */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={AWS} alt="AWS" />
+              </div>
             </div>
-            <div>
-              <img className="img" src={NETLIFY} alt="NETLIFY" />
+            {/* Netlify */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={NETLIFY} alt="NETLIFY" />
+              </div>
             </div>
-            <div>
-              <img className="img" src={CLOUDTYPE} alt="CLOUDTYPE" />
+            {/* CloudType */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={CLOUDTYPE} alt="CLOUDTYPE" />
+              </div>
             </div>
-          </ContentBox>
-          <h4>Cooperation</h4>
-          <ContentBox>
-            <div>
-              <img className="img" src={TRELLO} alt="TRELLO" />
+            {/* Trello */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={TRELLO} alt="TRELLO" />
+              </div>
             </div>
-            <div>
-              <img className="img" src={FIGMA} alt="FIGMA" />
+            {/* Figma */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={FIGMA} alt="FIGMA" />
+              </div>
             </div>
-            <div>
-              <img className="img" src={GITHUB} alt="GITHUB" />
+            {/* GitHub */}
+            <div className="skillInfoBox2">
+              <div className="icon">
+                <img className="img" src={GITHUB2} alt="GITHUB" />
+              </div>
             </div>
-          </ContentBox>
+          </div>
         </Title>
       </div>
       {<div className={`${window.localStorage.getItem("proUrl") ? (pageAni ? b : a) : pageAni ? a : b}`}></div>}
