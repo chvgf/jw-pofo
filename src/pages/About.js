@@ -266,9 +266,9 @@ function About(props) {
                 <br />
                 <hr />
                 <span className="text">
-                  세명 대학교
+                  세명대학교 무역학과/글로벌경영학부
                   <br />
-                  글로벌경영학부
+                  2015.03 - 2019.02 졸업
                 </span>
               </div>
             </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GONIMINTON, MYMUNG, POFO } from "../imges";
 import Header from "../components/Header";
+import GonimintonModal from "../components/GonimintonModal";
+import MymungModal from "../components/MymungModal";
 
 const ProjectsWrapper = styled.main`
   display: flex;
@@ -54,6 +56,7 @@ const ContentBox = styled.section`
     border: 1px solid #eee;
     color: #fff;
     transition: 0.2s;
+    cursor: pointer;
     @media (max-width: 1200px) {
       flex-direction: column;
       width: 100%;
@@ -91,6 +94,36 @@ function Projects(props) {
   const [timeOut, setTimeOut] = useState(false);
   const [TitleAni, setTitleAni] = useState(false);
 
+  const [thumModal1, setThumModal1] = useState(false);
+  const [thumModal2, setThumModal2] = useState(false);
+
+  const handleOpenModal = (num) => {
+    switch (num) {
+      case "1":
+        setThumModal1(true);
+        break;
+      case "2":
+        setThumModal2(true);
+        break;
+
+      default:
+        break;
+    }
+  };
+  const handleCloseMadal = (num) => {
+    switch (num) {
+      case "1":
+        setThumModal1(false);
+        break;
+      case "2":
+        setThumModal2(false);
+        break;
+
+      default:
+        break;
+    }
+  };
+
   setTimeout(() => {
     setTimeOut(true);
   }, 500);
@@ -116,7 +149,12 @@ function Projects(props) {
         </h1>
       </Title>
       <ContentBox className={`${timeOut ? d : c}`}>
-        <div className="contentItem">
+        <div
+          className="contentItem"
+          onClick={() => {
+            handleOpenModal("1");
+          }}
+        >
           {/* 고니민턴 */}
           <img src={GONIMINTON} />
           <div>
@@ -132,19 +170,26 @@ function Projects(props) {
               <br />
               유저간의 커뮤니티입니다.
             </p>
-            <p>
+            <p className="URL">
               <a href="https://goniminton.netlify.app/" target="blank">
                 <span>URL:</span> https://goniminton.netlify.app
               </a>
             </p>
-            <p>
+            <p className="URL">
               <a href="https://github.com/chvgf/teamstrong1000" target="blank">
                 <span>Github:</span> https://github.com/chvgf/teamstrong1000
               </a>
             </p>
           </div>
         </div>
-        <div className="contentItem">
+        {thumModal1 ? <GonimintonModal /> : ""}
+        {thumModal1 ? <GonimintonModal handleCloseMadal={() => handleCloseMadal("1")} /> : ""}
+        <div
+          className="contentItem"
+          onClick={() => {
+            handleOpenModal("2");
+          }}
+        >
           {/* 마이멍 */}
           <img src={MYMUNG} />
           <div>
@@ -172,6 +217,8 @@ function Projects(props) {
             </p>
           </div>
         </div>
+        {thumModal2 ? <MymungModal /> : ""}
+        {thumModal2 ? <MymungModal handleCloseMadal={() => handleCloseMadal("2")} /> : ""}
         <div className="contentItem">
           {/* 포폴사이트 */}
           <img src={POFO} />
