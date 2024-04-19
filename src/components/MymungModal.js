@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import { FaGithub } from "react-icons/fa6";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { AWS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB, GITHUB2 } from "../imges";
+import { mungChatting, mungDaily, mungMain, mungPer, mungShop, mungShopPayment, mungToktok, mungVin } from "../imges";
 
 const ModalBg = styled.div`
   width: 100vw;
@@ -19,6 +19,11 @@ const ModalBg = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  .zoomImg {
+    cursor: pointer;
+    width: 72vw;
+    height: auto;
+  }
 `;
 
 const ModalBox = styled.div`
@@ -26,6 +31,9 @@ const ModalBox = styled.div`
   height: 30rem;
   border-radius: 30px;
   padding: 50px 50px;
+  @media (max-width: 960px) {
+    height: 45rem;
+  }
 
   .headerBox {
     position: relative;
@@ -55,10 +63,17 @@ const ModalBox = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
   }
-
   .textBox .toolTextIcon {
     font-size: 18px;
+  }
+  .textBox p {
+    @media (max-width: 740px) {
+      font-size: 12px;
+    }
   }
 
   .toolText.be {
@@ -129,7 +144,6 @@ const StyledSlide = styled(Slider)`
 
   .slick-list {
     width: 240px;
-    height: 200;
     background-color: #cccccc;
     overflow: hidden;
   }
@@ -141,18 +155,34 @@ const StyledSlide = styled(Slider)`
   }
   .slick-prev {
     left: 30px;
+    @media (max-width: 960px) {
+      left: 0;
+    }
   }
   .slick-next {
     right: 48px;
+    @media (max-width: 960px) {
+      right: 80px;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: -60px;
+    background-color: transparent;
+  }
+  .slick-dots button {
+    position: absolute;
+    background-color: #cccccc;
+    border-radius: 33px;
   }
   .slick-active button::before {
     background-color: #ffb400;
     border-radius: 33px;
   }
-  button::before {
+  /* button::before {
     background-color: #eee;
     border-radius: 33px;
-  }
+  } */
 
   .slick-prev:before,
   .slick-next:before {
@@ -167,10 +197,29 @@ const StyledSlide = styled(Slider)`
   .img {
     width: 250px;
     height: 200px;
+    cursor: pointer;
+    @media (max-width: 960px) {
+      width: 180px;
+      height: 130px;
+    }
+  }
+  .slideSummary {
+    font-size: 12px;
+    line-height: 1rem;
+    letter-spacing: 0.5px;
+    display: block;
   }
 `;
 
 function MymungModal({ handleCloseMadal }) {
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [clickImg, setClickImg] = useState("");
+
+  const toggleZoom = (clickImg) => {
+    setIsZoomed(!isZoomed);
+    setClickImg(clickImg);
+  };
+
   const settings = {
     arrows: true, // 양 끝 화살표 생성여부
     dots: true, // 슬라이더 아래에 슬라이드 개수를 점 형태로 표시
@@ -183,71 +232,197 @@ function MymungModal({ handleCloseMadal }) {
   };
   return (
     <ModalBg>
-      <ModalBox>
-        <div className="headerBox">
-          <p className="closeBtn" onClick={() => handleCloseMadal()}>
-            ✖
-          </p>
-          <h1>GoniMinton</h1>
-          <p>🏸배드민턴 매칭 및 커뮤니티 웹서비스</p>
-        </div>
-        <div className="detailBox">
-          <div className="imgBox"></div>
-          <div className="textBox">
-            <p>
-              <span className="toolTextIcon">🧰: </span>
-              <span className="toolText">React</span>
-              <span className="toolText">Rudex</span>
-              <span className="toolText">Aioxs</span>
-              <span className="toolText">styled-components</span>
-              <span className="toolText">react-router-dom</span>
-              <span className="toolText be">MongoDB</span>
-              <span className="toolText be">Node.js</span>
-              <span className="toolText be">Express</span>
-              <span className="toolText be">Passport</span>
+      {isZoomed ? (
+        <img
+          className="zoomImg"
+          src={clickImg}
+          alt="zoomImg"
+          onClick={() => {
+            toggleZoom();
+          }}
+        />
+      ) : (
+        <ModalBox>
+          {/* <div className="headerBox">
+            <p className="closeBtn" onClick={() => handleCloseMadal()}>
+              ✖
             </p>
-            <a href="https://github.com/chvgf/finalProject" target="_blank" rel="noreferrer noopener" className="toolText git">
-              <FaGithub /> Github FE
-            </a>
-            <a href="https://github.com/chvgf/finalProjectServer" target="_blank" rel="noreferrer noopener" className="toolText git">
-              <FaGithub /> Github BE
-            </a>
-            <p className="summaryHeader">📋Summary</p>
-            <div className="summaryTextBox">
-              <p>· 팀원 구성: 풀스택2, 디자인+풀스택1</p>
-              <p className="summaryInfo">
-                <span>동네에서 배드민턴을 간편하게 게임처럼 즐길 수 있으면 어떨까 하는 생각에서 개발하게 되었습니다.</span>
-                <span>유저간의 소통을 위한 커뮤니티 기능이 있습니다. </span>
-                <span>경기 모집글을 등록해 청을 받고 경기가 끝난 후 승패 여부를 기록하여 승률을 기록합니다.</span>
-                <span>경기 등록/신청/종료 시 내일정 calender에 실시간 기록됩니다.</span>
-                <span>클럽을 개설하여 클럽원을 모집하고 클럽들 간의 순위를 표기합니다.</span>
-                <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
-                <span>지도는 NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
-                <span>FullCalendar 라이브러리에 google calendar api를 적용하였습니다.</span>
-                <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
+            <h1>GoniMinton</h1>
+            <p>🏸배드민턴 매칭 및 커뮤니티 웹서비스</p>
+          </div> */}
+          <div className="detailBox">
+            <div className="imgBox"></div>
+            <div className="textBox">
+              {/* <p>
+                <span className="toolTextIcon">* 기술스택: </span>
+                <span className="toolText">React</span>
+                <span className="toolText">Rudex</span>
+                <span className="toolText">Aioxs</span>
+                <span className="toolText">styled-components</span>
+                <span className="toolText">react-router-dom</span>
+                <span className="toolText be">MongoDB</span>
+                <span className="toolText be">Node.js</span>
+                <span className="toolText be">Express</span>
+                <span className="toolText be">Passport</span>
               </p>
+              <a href="https://github.com/chvgf/finalProject" target="_blank" rel="noreferrer noopener" className="toolText git">
+                <FaGithub /> Github FE
+              </a>
+              <a href="https://github.com/chvgf/finalProjectServer" target="_blank" rel="noreferrer noopener" className="toolText git">
+                <FaGithub /> Github BE
+              </a>
+              <p className="summaryHeader">* Summary</p>
+              <div className="summaryTextBox">
+                <p>· 팀원 구성: 풀스택2, 디자인+풀스택1</p>
+                <p className="summaryInfo">
+                  <span>동네에서 배드민턴을 간편하게 게임처럼 즐길 수 있으면 어떨까 하는 생각에서 개발하게 되었습니다.</span>
+                  <span>유저간의 소통을 위한 커뮤니티 기능이 있습니다. </span>
+                  <span>경기 모집글에 게시된 글중 작성자의 구력과 가입자의 구력을 비교하여 구력별 랜덤매칭을 제공합니다. </span>
+                  <span>경기 모집글을 등록해 청을 받고 경기가 끝난 후 승패 여부를 기록하여 승률을 기록합니다.</span>
+                  <span>경기 등록/신청/종료 시 내일정 calender에 실시간 기록됩니다.</span>
+                  <span>클럽을 개설하여 클럽원을 모집하고 클럽들 간의 순위를 표기합니다.</span>
+                  <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
+                  <span>지도는 NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
+                  <span>FullCalendar 라이브러리에 google calendar api를 적용하였습니다.</span>
+                  <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
+                </p>
+              </div> */}
             </div>
+            <StyledSlide {...settings}>
+              <div>
+                <img
+                  className="img"
+                  src={mungMain}
+                  alt="mungMain"
+                  onClick={() => {
+                    toggleZoom(mungMain);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 메인화면입니다.
+                    <br /> 게시된 경기목록을 확인할 수 있습니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungPer}
+                  alt="mungPer"
+                  onClick={() => {
+                    toggleZoom(mungPer);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 경기목록 디테일화면입니다.
+                    <br /> 경기 내용확인과 신청이 가능합니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungToktok}
+                  alt="mungToktok"
+                  onClick={() => {
+                    toggleZoom(mungToktok);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 랜덤매칭 화면입니다. <br />
+                    등록된 경기중 구력별 랜덤매칭이 가능합니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungDaily}
+                  alt="mintonCommunity"
+                  onClick={() => {
+                    toggleZoom(mungDaily);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">고니민턴 커뮤니티 화면입니다.</span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungVin}
+                  alt="mungVin"
+                  onClick={() => {
+                    toggleZoom(mungVin);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">고니민턴 클럽 화면입니다.</span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungShop}
+                  alt="mungShop"
+                  onClick={() => {
+                    toggleZoom(mungShop);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 명예의전당 입니다. <br />
+                    클럽별 순위와 승률을 표시합니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungShopPayment}
+                  alt="mungShopPayment"
+                  onClick={() => {
+                    toggleZoom(mungShopPayment);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 지도입니다. <br />
+                    거주지역 인근 체육관을 표시합니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungChatting}
+                  alt="mungChat"
+                  onClick={() => {
+                    toggleZoom(mungChatting);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    고니민턴 캘린더입니다. <br />
+                    신청한 경기일정을 표시합니다.
+                  </span>
+                </p>
+              </div>
+            </StyledSlide>
           </div>
-          <StyledSlide {...settings}>
-            <div>
-              <img className="img" src={NODEJS} alt="NODEJS" />
-              <br />
-              <span>설명설명야ㅕ영ㅇㅇ오여오여여</span>
-              <span>설명설명야ㅕ영ㅇㅇ오여오여여</span>
-              <span>설명설명야ㅕ영ㅇㅇ오여오여여</span>
-              <span>설명설명야ㅕ영ㅇㅇ오여오여여</span>
-            </div>
-            <div>
-              <img className="img" src={REACT} alt="NODEJS" />
-              <br />
-              <span>설명설명명명명명명명명며영</span>
-              <span>설명설명명명명명명명명며영</span>
-              <span>설명설명명명명명명명명며영</span>
-              <span>설명설명명명명명명명명며영</span>
-            </div>
-          </StyledSlide>
-        </div>
-      </ModalBox>
+        </ModalBox>
+      )}
     </ModalBg>
   );
 }
