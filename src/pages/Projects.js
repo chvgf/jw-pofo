@@ -82,6 +82,25 @@ const ContentBox = styled.section`
     }
   }
 `;
+const BlindBox = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffb400;
+  border-radius: 10px;
+  z-index: 1;
+  opacity: 0.3;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+
+  &:hover {
+    opacity: 0.68;
+    transition: 1s;
+  }
+`;
 
 function Projects(props) {
   let a = "inTest";
@@ -96,6 +115,9 @@ function Projects(props) {
 
   const [thumModal1, setThumModal1] = useState(false);
   const [thumModal2, setThumModal2] = useState(false);
+
+  const [gonimintonBlind, setGonimintonBlind] = useState(false);
+  const [myMungBlind, setMyMungBlind] = useState(false);
 
   const handleOpenModal = (num) => {
     switch (num) {
@@ -122,6 +144,13 @@ function Projects(props) {
       default:
         break;
     }
+  };
+
+  const handleGoniBlind = (boolean) => {
+    setGonimintonBlind(boolean);
+  };
+  const handleMungBlind = (boolean) => {
+    setMyMungBlind(boolean);
   };
 
   setTimeout(() => {
@@ -154,7 +183,14 @@ function Projects(props) {
           onClick={() => {
             handleOpenModal("1");
           }}
+          onMouseOver={() => {
+            handleGoniBlind(true);
+          }}
+          onMouseOut={() => {
+            handleGoniBlind(false);
+          }}
         >
+          {gonimintonBlind ? <BlindBox>🏸</BlindBox> : ""}
           {/* 고니민턴 */}
           <img src={GONIMINTON} />
           <div>
@@ -189,7 +225,14 @@ function Projects(props) {
           onClick={() => {
             handleOpenModal("2");
           }}
+          onMouseOver={() => {
+            handleMungBlind(true);
+          }}
+          onMouseOut={() => {
+            handleMungBlind(false);
+          }}
         >
+          {myMungBlind ? <BlindBox>🦮</BlindBox> : ""}
           {/* 마이멍 */}
           <img src={MYMUNG} />
           <div>
