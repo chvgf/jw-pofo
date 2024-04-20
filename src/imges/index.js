@@ -35,3 +35,4 @@ export const mungShopPayment = require("./mungShopPayment.PNG");
 export const mungToktok = require("./mungToktok.PNG");
 export const mungChatting = require("./mungChatting.png");
 export const mungVin = require("./mungVin.PNG");
+export const mungMap = require("./mungMap.PNG");

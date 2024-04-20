@@ -171,14 +171,14 @@ function Projects(props) {
               유저간의 커뮤니티입니다.
             </p>
             <p className="URL">
-              <a href="https://goniminton.netlify.app/" target="blank">
+              {/* <a href="https://goniminton.netlify.app/" target="blank">
                 <span>URL:</span> https://goniminton.netlify.app
-              </a>
+              </a> */}
             </p>
             <p className="URL">
-              <a href="https://github.com/chvgf/teamstrong1000" target="blank">
+              {/* <a href="https://github.com/chvgf/teamstrong1000" target="blank">
                 <span>Github:</span> https://github.com/chvgf/teamstrong1000
-              </a>
+              </a> */}
             </p>
           </div>
         </div>
@@ -206,14 +206,14 @@ function Projects(props) {
               품종및 나이등에 맞추어 사료와 물품이 추천됩니다.
             </p>
             <p>
-              <a href="https://jwc-mymung.netlify.app/" target="blank">
+              {/* <a href="https://jwc-mymung.netlify.app/" target="blank">
                 <span>URL:</span> https://jwc-mymung.netlify.app
-              </a>
+              </a> */}
             </p>
             <p>
-              <a href="https://github.com/chvgf/finalProject" target="blank">
+              {/* <a href="https://github.com/chvgf/finalProject" target="blank">
                 <span>Github:</span> https://github.com/chvgf/finalProject
-              </a>
+              </a> */}
             </p>
           </div>
         </div>

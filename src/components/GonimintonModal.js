@@ -284,6 +284,7 @@ function GoniModal({ handleCloseMadal }) {
               </a>
               <p className="summaryHeader">* Summary</p>
               <div className="summaryTextBox">
+                <p>· 풀스택으로 진행</p>
                 <p>· 팀원 구성: 풀스택2, 디자인+풀스택1</p>
                 <p className="summaryInfo">
                   <span>동네에서 배드민턴을 간편하게 게임처럼 즐길 수 있으면 어떨까 하는 생각에서 개발하게 되었습니다.</span>
@@ -313,6 +314,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 메인화면입니다.
+                    <br />
                     <br /> 게시된 경기목록을 확인할 수 있습니다.
                   </span>
                 </p>
@@ -330,6 +332,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 경기목록 디테일화면입니다.
+                    <br />
                     <br /> 경기 내용확인과 신청이 가능합니다.
                   </span>
                 </p>
@@ -347,6 +350,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 랜덤매칭 화면입니다. <br />
+                    <br />
                     등록된 경기중 구력별 랜덤매칭이 가능합니다.
                   </span>
                 </p>
@@ -392,6 +396,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 명예의전당 입니다. <br />
+                    <br />
                     클럽별 순위와 승률을 표시합니다.
                   </span>
                 </p>
@@ -409,6 +414,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 지도입니다. <br />
+                    <br />
                     거주지역 인근 체육관을 표시합니다.
                   </span>
                 </p>
@@ -426,6 +432,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 캘린더입니다. <br />
+                    <br />
                     신청한 경기일정을 표시합니다.
                   </span>
                 </p>
@@ -443,6 +450,7 @@ function GoniModal({ handleCloseMadal }) {
                 <p>
                   <span className="slideSummary">
                     고니민턴 마이페이지입니다. <br />
+                    <br />
                     개인 승패의 수를 표시합니다.
                   </span>
                 </p>

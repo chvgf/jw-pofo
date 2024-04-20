@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { mungChatting, mungDaily, mungMain, mungPer, mungShop, mungShopPayment, mungToktok, mungVin } from "../imges";
+import { mungChatting, mungDaily, mungMain, mungPer, mungShop, mungShopPayment, mungToktok, mungVin, mungMap } from "../imges";
 
 const ModalBg = styled.div`
   width: 100vw;
@@ -275,7 +275,8 @@ function MymungModal({ handleCloseMadal }) {
               </a>
               <p className="summaryHeader">* Summary</p>
               <div className="summaryTextBox">
-                <p>· 팀원 구성: ProntEnd 4, BackEnd 2</p>
+                <p>· FrontEnd로 진행</p>
+                <p>· 팀원 구성: FrontEnd 4, BackEnd 2</p>
                 <p className="summaryInfo">
                   <span>키우는 반려견의 종과 나이 등에 맞추어 추천 제품과 정보등을 한눈에 볼 수 있게하기 위하여 개발하게 되었습니다.</span>
                   <span>가입자가 입력한 반려견의 견종, 나이 등 정보를 토대로 커뮤니티의 글들과 중고거래, 샵의 제품들을 추천받습니다. </span>
@@ -301,8 +302,9 @@ function MymungModal({ handleCloseMadal }) {
                 <br />
                 <p>
                   <span className="slideSummary">
-                    고니민턴 메인화면입니다.
-                    <br /> 게시된 경기목록을 확인할 수 있습니다.
+                    마이멍의 메인화면입니다.
+                    <br />
+                    <br /> 최근 게시된 글과 상위 조회수의 글을 기재합니다.
                   </span>
                 </p>
               </div>
@@ -318,8 +320,9 @@ function MymungModal({ handleCloseMadal }) {
                 <br />
                 <p>
                   <span className="slideSummary">
-                    고니민턴 경기목록 디테일화면입니다.
-                    <br /> 경기 내용확인과 신청이 가능합니다.
+                    마이멍의 persnal 페이지입니다.
+                    <br />
+                    <br /> 가입시 기입한 반려견의 정보와 일치하는 글과 상품의 목록을 보여줍니다. (로그인 시 활성화)
                   </span>
                 </p>
               </div>
@@ -335,8 +338,9 @@ function MymungModal({ handleCloseMadal }) {
                 <br />
                 <p>
                   <span className="slideSummary">
-                    고니민턴 랜덤매칭 화면입니다. <br />
-                    등록된 경기중 구력별 랜덤매칭이 가능합니다.
+                    마이멍의 육아톡톡 페이지입니다. <br />
+                    <br />
+                    반려견 육아시 필요한 정보들을 공유하는 커뮤니티 게시판입니다.
                   </span>
                 </p>
               </div>
@@ -351,7 +355,12 @@ function MymungModal({ handleCloseMadal }) {
                 />
                 <br />
                 <p>
-                  <span className="slideSummary">고니민턴 커뮤니티 화면입니다.</span>
+                  <span className="slideSummary">
+                    마이멍의 데일리독 페이지입니다.
+                    <br />
+                    <br />
+                    반려견의 산책, 노는 모습 등의 일상을 기록하는 커뮤니티 게시판입니다.
+                  </span>
                 </p>
               </div>
               <div>
@@ -365,7 +374,7 @@ function MymungModal({ handleCloseMadal }) {
                 />
                 <br />
                 <p>
-                  <span className="slideSummary">고니민턴 클럽 화면입니다.</span>
+                  <span className="slideSummary">마이멍의 중고거래 페이지입니다.</span>
                 </p>
               </div>
               <div>
@@ -379,10 +388,7 @@ function MymungModal({ handleCloseMadal }) {
                 />
                 <br />
                 <p>
-                  <span className="slideSummary">
-                    고니민턴 명예의전당 입니다. <br />
-                    클럽별 순위와 승률을 표시합니다.
-                  </span>
+                  <span className="slideSummary">마이멍의 쇼핑몰 페이지 입니다.</span>
                 </p>
               </div>
               <div>
@@ -397,8 +403,27 @@ function MymungModal({ handleCloseMadal }) {
                 <br />
                 <p>
                   <span className="slideSummary">
-                    고니민턴 지도입니다. <br />
-                    거주지역 인근 체육관을 표시합니다.
+                    마이멍의 결제 페이지입니다. <br />
+                    <br />
+                    결제 api를 통해 실시간 결제가 가능합니다.
+                  </span>
+                </p>
+              </div>
+              <div>
+                <img
+                  className="img"
+                  src={mungMap}
+                  alt="mungMap"
+                  onClick={() => {
+                    toggleZoom(mungMap);
+                  }}
+                />
+                <br />
+                <p>
+                  <span className="slideSummary">
+                    마이멍의 지도 검색 페이지입니다. <br />
+                    <br />
+                    kakaoMap을 이용한 전반적 지도 검색이 가능합니다.
                   </span>
                 </p>
               </div>
@@ -413,10 +438,7 @@ function MymungModal({ handleCloseMadal }) {
                 />
                 <br />
                 <p>
-                  <span className="slideSummary">
-                    고니민턴 캘린더입니다. <br />
-                    신청한 경기일정을 표시합니다.
-                  </span>
+                  <span className="slideSummary">마이멍의 실시간 채팅입니다.</span>
                 </p>
               </div>
             </StyledSlide>
