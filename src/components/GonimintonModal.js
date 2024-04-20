@@ -293,7 +293,7 @@ function GoniModal({ handleCloseMadal }) {
                   <span>경기 등록/신청/종료 시 내일정 calender에 실시간 기록됩니다.</span>
                   <span>클럽을 개설하여 클럽원을 모집하고 클럽들 간의 순위를 표기합니다.</span>
                   <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
-                  <span>지도는 NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
+                  <span>NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
                   <span>FullCalendar 라이브러리에 google calendar api를 적용하였습니다.</span>
                   <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
                 </p>

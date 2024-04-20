@@ -243,17 +243,17 @@ function MymungModal({ handleCloseMadal }) {
         />
       ) : (
         <ModalBox>
-          {/* <div className="headerBox">
+          <div className="headerBox">
             <p className="closeBtn" onClick={() => handleCloseMadal()}>
               ✖
             </p>
             <h1>GoniMinton</h1>
-            <p>🏸배드민턴 매칭 및 커뮤니티 웹서비스</p>
-          </div> */}
+            <p>🐶가입자의 반려견 맞춤 정보와 상품 추천 및 애견인 켜뮤니티 제공 웹 서비스</p>
+          </div>
           <div className="detailBox">
             <div className="imgBox"></div>
             <div className="textBox">
-              {/* <p>
+              <p>
                 <span className="toolTextIcon">* 기술스택: </span>
                 <span className="toolText">React</span>
                 <span className="toolText">Rudex</span>
@@ -264,6 +264,8 @@ function MymungModal({ handleCloseMadal }) {
                 <span className="toolText be">Node.js</span>
                 <span className="toolText be">Express</span>
                 <span className="toolText be">Passport</span>
+                <span className="toolText be">Socket.io</span>
+                <span className="toolText be">AWS S3</span>
               </p>
               <a href="https://github.com/chvgf/finalProject" target="_blank" rel="noreferrer noopener" className="toolText git">
                 <FaGithub /> Github FE
@@ -273,20 +275,18 @@ function MymungModal({ handleCloseMadal }) {
               </a>
               <p className="summaryHeader">* Summary</p>
               <div className="summaryTextBox">
-                <p>· 팀원 구성: 풀스택2, 디자인+풀스택1</p>
+                <p>· 팀원 구성: ProntEnd 4, BackEnd 2</p>
                 <p className="summaryInfo">
-                  <span>동네에서 배드민턴을 간편하게 게임처럼 즐길 수 있으면 어떨까 하는 생각에서 개발하게 되었습니다.</span>
-                  <span>유저간의 소통을 위한 커뮤니티 기능이 있습니다. </span>
-                  <span>경기 모집글에 게시된 글중 작성자의 구력과 가입자의 구력을 비교하여 구력별 랜덤매칭을 제공합니다. </span>
-                  <span>경기 모집글을 등록해 청을 받고 경기가 끝난 후 승패 여부를 기록하여 승률을 기록합니다.</span>
-                  <span>경기 등록/신청/종료 시 내일정 calender에 실시간 기록됩니다.</span>
-                  <span>클럽을 개설하여 클럽원을 모집하고 클럽들 간의 순위를 표기합니다.</span>
+                  <span>키우는 반려견의 종과 나이 등에 맞추어 추천 제품과 정보등을 한눈에 볼 수 있게하기 위하여 개발하게 되었습니다.</span>
+                  <span>가입자가 입력한 반려견의 견종, 나이 등 정보를 토대로 커뮤니티의 글들과 중고거래, 샵의 제품들을 추천받습니다. </span>
+                  <span>정보공유, 일상공유 등의 커뮤니티가 활성되어 있습니다.</span>
+                  <span>쇼핑몰에서 카테고리별 상품을 검색하고 장바구니, 리뷰, 실시간 결제 등이 가능합니다.</span>
+                  <span>kakaoMap Api를 사용하여 인근 산책로, 동물병원 등 검색이 가능합니다.</span>
+                  <span>Socket.io로 실시간 채팅 1:1이 가능합니다.</span>
                   <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
-                  <span>지도는 NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
-                  <span>FullCalendar 라이브러리에 google calendar api를 적용하였습니다.</span>
                   <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
                 </p>
-              </div> */}
+              </div>
             </div>
             <StyledSlide {...settings}>
               <div>
