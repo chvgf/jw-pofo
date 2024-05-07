@@ -15,6 +15,7 @@ import {
   mintonRandom,
   mintonRanking,
 } from "../imges";
+import ZoomImg from "./ZoomImg";
 
 const ModalBg = styled.div`
   width: 100vw;
@@ -41,8 +42,15 @@ const ModalBox = styled.div`
   height: 30rem;
   border-radius: 30px;
   padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   @media (max-width: 960px) {
     height: 45rem;
+  }
+  h1 {
+    margin-bottom: 10px;
   }
 
   .headerBox {
@@ -52,7 +60,7 @@ const ModalBox = styled.div`
   }
   .headerBox .closeBtn {
     position: absolute;
-    right: 0;
+    right: -3rem;
     font-size: 40px;
     cursor: pointer;
     transition: 1s;
@@ -63,7 +71,7 @@ const ModalBox = styled.div`
   }
 
   .headerBox p {
-    font-family: "Gowun Batang", serif;
+    /* font-family: "Gowun Batang", serif; */
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
@@ -153,7 +161,7 @@ const StyledSlide = styled(Slider)`
   }
 
   .slick-list {
-    width: 240px;
+    width: 18rem;
     background-color: #cccccc;
     overflow: hidden;
   }
@@ -205,8 +213,9 @@ const StyledSlide = styled(Slider)`
     -webkit-font-smoothing: antialiased;
   }
   .img {
-    width: 250px;
-    height: 200px;
+    width: 18rem;
+    height: 10rem;
+    overflow: hidden;
     cursor: pointer;
     @media (max-width: 960px) {
       width: 180px;
@@ -240,19 +249,37 @@ function GoniModal({ handleCloseMadal }) {
     autoplay: true, // 슬라이드를 자동으로 넘길지 여부
     autoplaySpeed: 3000, // 자동으로 넘길 시 시간 간격
   };
-
+  const imgList = [
+    mintonMain1,
+    mintonDetail,
+    mintonRandom,
+    mintonCommunity,
+    mintonClub,
+    mintonRanking,
+    mintonMap,
+    mintonCalendar,
+    mintonMyPage,
+  ];
   return (
     <ModalBg>
       {isZoomed ? (
-        <img
-          className="zoomImg"
-          src={clickImg}
-          alt="zoomImg"
-          onClick={() => {
+        <ZoomImg
+          clickImg={clickImg}
+          isZoomed={isZoomed}
+          imgList={imgList}
+          toggleZoom={() => {
             toggleZoom();
           }}
         />
       ) : (
+        // <img
+        //   className="zoomImg"
+        //   src={clickImg}
+        //   alt="zoomImg"
+        //   onClick={() => {
+        //     toggleZoom();
+        //   }}
+        // />
         <ModalBox>
           <div className="headerBox">
             <p className="closeBtn" onClick={() => handleCloseMadal()}>
@@ -304,10 +331,10 @@ function GoniModal({ handleCloseMadal }) {
               <div>
                 <img
                   className="img"
-                  src={mintonMain1}
+                  src={imgList[0]}
                   alt="mintonMain1"
                   onClick={() => {
-                    toggleZoom(mintonMain1);
+                    toggleZoom(0);
                   }}
                 />
                 <br />
@@ -325,7 +352,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonDetail}
                   alt="mintonDetail"
                   onClick={() => {
-                    toggleZoom(mintonDetail);
+                    toggleZoom(1);
                   }}
                 />
                 <br />
@@ -343,7 +370,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonRandom}
                   alt="mintonRandom"
                   onClick={() => {
-                    toggleZoom(mintonRandom);
+                    toggleZoom(2);
                   }}
                 />
                 <br />
@@ -361,7 +388,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonCommunity}
                   alt="mintonCommunity"
                   onClick={() => {
-                    toggleZoom(mintonCommunity);
+                    toggleZoom(3);
                   }}
                 />
                 <br />
@@ -375,7 +402,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonClub}
                   alt="mintonClub"
                   onClick={() => {
-                    toggleZoom(mintonClub);
+                    toggleZoom(4);
                   }}
                 />
                 <br />
@@ -389,7 +416,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonRanking}
                   alt="mintonRanking"
                   onClick={() => {
-                    toggleZoom(mintonRanking);
+                    toggleZoom(5);
                   }}
                 />
                 <br />
@@ -407,7 +434,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonMap}
                   alt="mintonMap"
                   onClick={() => {
-                    toggleZoom(mintonMap);
+                    toggleZoom(6);
                   }}
                 />
                 <br />
@@ -425,7 +452,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonCalendar}
                   alt="mintonCalendar"
                   onClick={() => {
-                    toggleZoom(mintonCalendar);
+                    toggleZoom(7);
                   }}
                 />
                 <br />
@@ -443,7 +470,7 @@ function GoniModal({ handleCloseMadal }) {
                   src={mintonMyPage}
                   alt="mintonMyPage"
                   onClick={() => {
-                    toggleZoom(mintonMyPage);
+                    toggleZoom(8);
                   }}
                 />
                 <br />

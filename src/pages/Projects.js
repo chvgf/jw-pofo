@@ -80,6 +80,9 @@ const ContentBox = styled.section`
         color: #ffb400;
       }
     }
+    a:hover {
+      color: #ffb400;
+    }
   }
 `;
 const BlindBox = styled.div`

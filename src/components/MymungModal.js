@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { mungChatting, mungDaily, mungMain, mungPer, mungShop, mungShopPayment, mungToktok, mungVin, mungMap } from "../imges";
+import ZoomImg from "./ZoomImg";
 
 const ModalBg = styled.div`
   width: 100vw;
@@ -31,8 +32,15 @@ const ModalBox = styled.div`
   height: 30rem;
   border-radius: 30px;
   padding: 50px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   @media (max-width: 960px) {
     height: 45rem;
+  }
+  h1 {
+    margin-bottom: 10px;
   }
 
   .headerBox {
@@ -42,7 +50,7 @@ const ModalBox = styled.div`
   }
   .headerBox .closeBtn {
     position: absolute;
-    right: 0;
+    right: -3rem;
     font-size: 40px;
     cursor: pointer;
     transition: 1s;
@@ -53,7 +61,7 @@ const ModalBox = styled.div`
   }
 
   .headerBox p {
-    font-family: "Gowun Batang", serif;
+    /* font-family: "Gowun Batang", serif; */
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
@@ -143,7 +151,7 @@ const StyledSlide = styled(Slider)`
   }
 
   .slick-list {
-    width: 240px;
+    width: 18rem;
     background-color: #cccccc;
     overflow: hidden;
   }
@@ -195,8 +203,9 @@ const StyledSlide = styled(Slider)`
     -webkit-font-smoothing: antialiased;
   }
   .img {
-    width: 250px;
-    height: 200px;
+    width: 18rem;
+    height: 10rem;
+    /* height: auto; */
     cursor: pointer;
     @media (max-width: 960px) {
       width: 180px;
@@ -230,14 +239,15 @@ function MymungModal({ handleCloseMadal }) {
     autoplay: true, // 슬라이드를 자동으로 넘길지 여부
     autoplaySpeed: 3000, // 자동으로 넘길 시 시간 간격
   };
+  const imgList = [mungMain, mungPer, mungToktok, mungDaily, mungVin, mungShop, mungShopPayment, mungMap /*  mungChatting */];
   return (
     <ModalBg>
       {isZoomed ? (
-        <img
-          className="zoomImg"
-          src={clickImg}
-          alt="zoomImg"
-          onClick={() => {
+        <ZoomImg
+          clickImg={clickImg}
+          isZoomed={isZoomed}
+          imgList={imgList}
+          toggleZoom={() => {
             toggleZoom();
           }}
         />
@@ -247,7 +257,7 @@ function MymungModal({ handleCloseMadal }) {
             <p className="closeBtn" onClick={() => handleCloseMadal()}>
               ✖
             </p>
-            <h1>GoniMinton</h1>
+            <h1>Mymung</h1>
             <p>🐶가입자의 반려견 맞춤 정보와 상품 추천 및 애견인 켜뮤니티 제공 웹 서비스</p>
           </div>
           <div className="detailBox">
@@ -296,7 +306,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungMain}
                   alt="mungMain"
                   onClick={() => {
-                    toggleZoom(mungMain);
+                    toggleZoom(0);
                   }}
                 />
                 <br />
@@ -314,7 +324,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungPer}
                   alt="mungPer"
                   onClick={() => {
-                    toggleZoom(mungPer);
+                    toggleZoom(1);
                   }}
                 />
                 <br />
@@ -332,7 +342,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungToktok}
                   alt="mungToktok"
                   onClick={() => {
-                    toggleZoom(mungToktok);
+                    toggleZoom(2);
                   }}
                 />
                 <br />
@@ -350,7 +360,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungDaily}
                   alt="mintonCommunity"
                   onClick={() => {
-                    toggleZoom(mungDaily);
+                    toggleZoom(3);
                   }}
                 />
                 <br />
@@ -369,7 +379,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungVin}
                   alt="mungVin"
                   onClick={() => {
-                    toggleZoom(mungVin);
+                    toggleZoom(4);
                   }}
                 />
                 <br />
@@ -383,7 +393,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungShop}
                   alt="mungShop"
                   onClick={() => {
-                    toggleZoom(mungShop);
+                    toggleZoom(5);
                   }}
                 />
                 <br />
@@ -397,7 +407,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungShopPayment}
                   alt="mungShopPayment"
                   onClick={() => {
-                    toggleZoom(mungShopPayment);
+                    toggleZoom(6);
                   }}
                 />
                 <br />
@@ -415,7 +425,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungMap}
                   alt="mungMap"
                   onClick={() => {
-                    toggleZoom(mungMap);
+                    toggleZoom(7);
                   }}
                 />
                 <br />
@@ -433,7 +443,7 @@ function MymungModal({ handleCloseMadal }) {
                   src={mungChatting}
                   alt="mungChat"
                   onClick={() => {
-                    toggleZoom(mungChatting);
+                    toggleZoom(8);
                   }}
                 />
                 <br />
