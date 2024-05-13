@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import {
-  mintonCalendar,
-  mintonClub,
-  mintonCommunity,
-  mintonDetail,
-  mintonMain1,
-  mintonMap,
-  mintonMyPage,
-  mintonRandom,
-  mintonRanking,
-} from "../imges";
 const StyledSlide = styled(Slider)`
   & div {
     position: relative;
@@ -76,6 +65,7 @@ const StyledSlide = styled(Slider)`
 
 function ZoomImg(props) {
   const arr = props.imgList;
+  let arrtest = [1, 2, 3];
   const settings = {
     arrows: true, // 양 끝 화살표 생성여부
     dots: true, // 슬라이더 아래에 슬라이드 개수를 점 형태로 표시
@@ -112,11 +102,11 @@ function ZoomImg(props) {
   // console.log(gen.next());
   // gen.next();
 
-  console.log(props.imgList);
-  for (let i = 0; i < arr.length; i++) {
-    const element = arr[i];
-    console.log(element);
-  }
+  // console.log(props.imgList);
+  // for (let i = 0; i < arr.length; i++) {
+  //   const element = arr[i];
+  //   console.log(element);
+  // }
 
   return (
     // slide slick map 함수 사용법 확ㅇ이이이잉

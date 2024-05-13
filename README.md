@@ -16,13 +16,27 @@ React를 기반으로 만들었고, cloudtype을 사용하여 배포하였습니
 
 - 피그마로 만든 메인 디자인 퍼블리싱
 - 매칭 페이지 제작
+  - MongoDB 활용 CRUD
+  - aixos 활용한 데이터 연동
+  -
 - 커뮤니티 페이지 제작
+  - MongoDB 활용 CRUD
+  - aixos 활용한 데이터 연동
 - 검색 기능 구현
 - 랜덤 매칭 기능 구현
 
 마이멍
 
 - 커뮤니티 텝 육아톡톡 페이지 제작
+  - MongoDB 활용 CRUD
+  - aixos 활용한 데이터 연동
+  - react-js-pagination 라이브러리 활용 페이지네이션
+  - useState 활용 실시간 댓글, 좋아요, 조회수 반영
 - 사용자 맞춤 페이지 제작(personalDog)
+  - MongoDB 활용 CRUD
+  - aixos 활용한 데이터 연동
+  - slide slick 라이브러리 활용 슬라이드
 - 로그인, 회원가입 구현
+  - regex 활용 유효성 검사 진행
 - kakaoMap api 이용한 지도 검색 구현
+- aws S3 이용하여 사진 업로드
