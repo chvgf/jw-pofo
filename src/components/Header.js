@@ -43,6 +43,7 @@ const HeaderWrapper = styled.header`
       @media (max-width: 1550px) {
         font-size: 30px;
       }
+
       cursor: pointer;
       .icon {
         background-color: #ffb400;
@@ -66,6 +67,9 @@ const HeaderWrapper = styled.header`
         background-color: transparent;
         @media (max-width: 1550px) {
           font-size: 10px;
+        }
+        @media (max-width: 1300px) {
+          opacity: 0;
         }
       }
     }

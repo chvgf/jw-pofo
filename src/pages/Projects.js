@@ -106,6 +106,8 @@ const BlindBox = styled.div`
 `;
 
 function Projects(props) {
+  const currentUrl = window.location.href;
+  window.localStorage.setItem("proUrl", currentUrl);
   let a = "inTest";
   let b = "outTest";
   let c = "timeOut1";
@@ -121,6 +123,7 @@ function Projects(props) {
 
   const [gonimintonBlind, setGonimintonBlind] = useState(false);
   const [myMungBlind, setMyMungBlind] = useState(false);
+  const [pofogBlind, setPofoBlind] = useState(false);
 
   const handleOpenModal = (num) => {
     switch (num) {
@@ -149,11 +152,18 @@ function Projects(props) {
     }
   };
 
+  const handleOpenNewTab = (url) => {
+    window.open(url, "_blank", "noopener, noreferrer");
+  };
+
   const handleGoniBlind = (boolean) => {
     setGonimintonBlind(boolean);
   };
   const handleMungBlind = (boolean) => {
     setMyMungBlind(boolean);
+  };
+  const handlePofoBlind = (boolean) => {
+    setPofoBlind(boolean);
   };
 
   setTimeout(() => {
@@ -168,9 +178,6 @@ function Projects(props) {
       behavior: "smooth",
     });
   }, []);
-
-  const currentUrl = window.location.href;
-  window.localStorage.setItem("proUrl", currentUrl);
 
   return (
     <ProjectsWrapper>
@@ -193,8 +200,8 @@ function Projects(props) {
             handleGoniBlind(false);
           }}
         >
-          {gonimintonBlind ? <BlindBox>🏸</BlindBox> : ""}
           {/* 고니민턴 */}
+          {gonimintonBlind ? <BlindBox>🏸</BlindBox> : ""}
           <img src={GONIMINTON} />
           <div>
             <p>
@@ -235,8 +242,8 @@ function Projects(props) {
             handleMungBlind(false);
           }}
         >
-          {myMungBlind ? <BlindBox>🦮</BlindBox> : ""}
           {/* 마이멍 */}
+          {myMungBlind ? <BlindBox>🦮</BlindBox> : ""}
           <img src={MYMUNG} />
           <div>
             <p>
@@ -265,8 +272,20 @@ function Projects(props) {
         </div>
         {thumModal2 ? <MymungModal /> : ""}
         {thumModal2 ? <MymungModal handleCloseMadal={() => handleCloseMadal("2")} /> : ""}
-        <div className="contentItem">
-          {/* 포폴사이트 */}
+        {/* 포폴사이트 */}
+        <div
+          className="contentItem"
+          onClick={() => {
+            handleOpenNewTab("https://github.com/chvgf/jw-pofo");
+          }}
+          onMouseOver={() => {
+            handlePofoBlind(true);
+          }}
+          onMouseOut={() => {
+            handlePofoBlind(false);
+          }}
+        >
+          {pofogBlind ? <BlindBox>📄</BlindBox> : ""}
           <img src={POFO} />
           <div>
             <p>천준우 포트폴리오 사이트</p>
