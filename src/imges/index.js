@@ -1,31 +1,13 @@
-// 기술들
-// export const CSS = require("./CSS.3.svg.png");
-// export const JS = require("./Javascript_Logo.png");
-// export const REACT = require("./REACT.png");
-// export const REDUX = require("./react-redux.png");
-// export const NEXTJS = require("./nextjs.png");
-// export const NODEJS = require("./Node.png");
-// export const EXPRESSJS = require("./express.png");
-// export const MONGODB = require("./mongoDB.png");
-// export const AWS = require("./aws.png");
-// export const AWS2 = require("./aws2.png");
-// export const NETLIFY = require("./netlify.png");
-// export const CLOUDTYPE = require("./cloudtype.png");
-// export const TRELLO = require("./Trello-Logo.png");
-// export const TRELLO2 = require("./Trello-Logo2.png");
-// export const FIGMA = require("./figma.png");
-// export const GITHUB = require("./GitHub-logo.png");
-// export const GITHUB2 = require("./github-logo2.png");
-// 스킬 .. Backend
-export const BescExpress = require("./BescExpressJs.jpg");
-export const BescMongoDB = require("./BescMongoDB.png");
-export const BescNode = require("./BescNode.png");
 // 스킬 .. Frontend
 export const FEscHtmlCss = require("./FEscHtmlCss.jpg");
 export const FescJs = require("./FescJs.png");
 export const FescNext = require("./FescNext.jpg");
 export const FescReact = require("./FescReact.jpg");
 export const FescRedux = require("./FescRedux.png");
+// 스킬 .. Backend
+export const BescExpress = require("./BescExpressJs.jpg");
+export const BescMongoDB = require("./BescMongoDB.png");
+export const BescNode = require("./BescNode.png");
 // 스킬 .. Deployment/Cooperation
 export const scAWS = require("./scAWS.png");
 export const scCloudType = require("./scCloudType.jpg");

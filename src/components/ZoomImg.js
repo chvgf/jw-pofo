@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 const StyledSlide = styled(Slider)`
@@ -64,8 +64,6 @@ const StyledSlide = styled(Slider)`
 `;
 
 function ZoomImg(props) {
-  const arr = props.imgList;
-  let arrtest = [1, 2, 3];
   const settings = {
     arrows: true, // 양 끝 화살표 생성여부
     dots: true, // 슬라이더 아래에 슬라이드 개수를 점 형태로 표시

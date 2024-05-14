@@ -141,7 +141,7 @@ function Main(props) {
         </p>
       </SectionInfo>
       <SectionImg className={`${timeOut ? d : c}`}>
-        <img src={mainImg}></img>
+        <img src={mainImg} alt="profile"></img>
       </SectionImg>
       <div className={`${pageAni ? b : a}`}></div>
     </MainWrapper>
