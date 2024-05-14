@@ -120,11 +120,11 @@ function Main(props) {
       <SectionInfo className={`${timeOut ? d : c}`}>
         <p className="p1">Hi! how are you?</p>
         <p className="p2">
-          <p>I'm</p>
+          <p>I'm </p>
           &nbsp;
           <Typewriter
             options={{
-              strings: [" JunWoo Cheon", " Web Developer"],
+              strings: [" JunWoo Cheon", "a web developer"],
               autoStart: true,
               loop: true,
             }}
