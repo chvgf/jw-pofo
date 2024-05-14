@@ -296,8 +296,8 @@ function GoniModal({ handleCloseMadal }) {
                 <span className="toolText">React</span>
                 <span className="toolText">Rudex</span>
                 <span className="toolText">Aioxs</span>
-                <span className="toolText">styled-components</span>
-                <span className="toolText">react-router-dom</span>
+                <span className="toolText">Styled-Components</span>
+                <span className="toolText">React-Router-Dom</span>
                 <span className="toolText be">MongoDB</span>
                 <span className="toolText be">Node.js</span>
                 <span className="toolText be">Express</span>
@@ -323,7 +323,7 @@ function GoniModal({ handleCloseMadal }) {
                   <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
                   <span>NaverMap api를 사용하여 현재 위치와 인근 배드민턴장을 표시합니다.</span>
                   <span>FullCalendar 라이브러리에 google calendar api를 적용하였습니다.</span>
-                  <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
+                  <span>FE에선 Redux Store, BE에서는 Passport로 미들웨어를 설정해 회원을 식별합니다.</span>
                 </p>
               </div>
             </div>

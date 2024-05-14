@@ -268,8 +268,8 @@ function MymungModal({ handleCloseMadal }) {
                 <span className="toolText">React</span>
                 <span className="toolText">Rudex</span>
                 <span className="toolText">Aioxs</span>
-                <span className="toolText">styled-components</span>
-                <span className="toolText">react-router-dom</span>
+                <span className="toolText">Styled-Components</span>
+                <span className="toolText">React-Router-Dom</span>
                 <span className="toolText be">MongoDB</span>
                 <span className="toolText be">Node.js</span>
                 <span className="toolText be">Express</span>
@@ -295,7 +295,7 @@ function MymungModal({ handleCloseMadal }) {
                   <span>kakaoMap Api를 사용하여 인근 산책로, 동물병원 등 검색이 가능합니다.</span>
                   <span>Socket.io로 실시간 채팅 1:1이 가능합니다.</span>
                   <span>회원가입 시 비밀번호를 bcrypt로 암호화하고 Regex를 사용하여 유효성 검사를 실행합니다.</span>
-                  <span>FE에선 Redux Store, BE에서는 passport로 미들웨어를 설정해 회원을 식별합니다.</span>
+                  <span>FE에선 Redux Store, BE에서는 Passport로 미들웨어를 설정해 회원을 식별합니다.</span>
                 </p>
               </div>
             </div>

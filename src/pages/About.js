@@ -2,8 +2,25 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { MdCall, MdSchool, MdPerson } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
-import HTML from "../imges/HTML";
-import { AWS, JS, REACT, REDUX, NEXTJS, NODEJS, EXPRESSJS, MONGODB, NETLIFY, CLOUDTYPE, TRELLO, FIGMA, GITHUB, GITHUB2 } from "../imges";
+import {
+  // front
+  FEscHtmlCss,
+  FescJs,
+  FescNext,
+  FescReact,
+  FescRedux,
+  // beck
+  BescNode,
+  BescExpress,
+  BescMongoDB,
+  // dep
+  scAWS,
+  scCloudType,
+  scFigma,
+  scGithub,
+  scNetlify,
+  scTrello,
+} from "../imges";
 import Header from "../components/Header";
 
 const AboutWrapper = styled.main`
@@ -102,8 +119,8 @@ const AboutWrapper = styled.main`
         align-items: center;
         margin-bottom: 10px;
         .img {
-          width: 65px;
-          height: 65px;
+          width: 70px;
+          height: auto;
           border-radius: 15px;
         }
         span {
@@ -153,9 +170,13 @@ const AboutWrapper = styled.main`
         justify-content: center;
         align-items: center;
         .img {
-          width: 100px;
+          width: 5rem;
           height: auto;
-          border-radius: 15px;
+          border-radius: 100%;
+        }
+        span {
+          color: #ffb400;
+          font-size: 15px;
         }
       }
     }
@@ -207,10 +228,10 @@ function About(props) {
   useEffect(() => {
     setPageAni(true);
     setTitleAni(true);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // window.scrollTo({
+    //   top: 0,
+    //   behavior: "smooth",
+    // });
   }, []);
 
   return (
@@ -283,8 +304,8 @@ function About(props) {
             {/* html */}
             <div className="skillInfoBox">
               <div className="icon">
-                <HTML className="img" alt="HTML" />
-                <span>&nbsp;:HTML/CSS</span>
+                <img className="img" src={FEscHtmlCss} alt="CSS/HTML" />
+                <span>&nbsp;&nbsp;: CSS/HTML</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -301,8 +322,8 @@ function About(props) {
             {/* js */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={JS} alt="JS" />
-                <span>&nbsp;:Javascript</span>
+                <img className="img" src={FescJs} alt="JS" />
+                <span>&nbsp;&nbsp;: Javascript</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -316,29 +337,29 @@ function About(props) {
                 </div>
               </div>
             </div>
-            {/* react */}
+            {/* React */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={REACT} alt="REACT" />
-                <span>&nbsp;:React</span>
+                <img className="img" src={FescReact} alt="REACT" />
+                <span>&nbsp;&nbsp;: React</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
                   <span className="skillText"> 컴포넌트의 생명주기와 속성을 이해하여 활용할 수 있습니다.</span>
                 </div>
                 <div className="skillTextbox">
-                  <span className="skillText"> 다양한 훅 사용을 통한 여러가지 방식의 react활용이 가능합니다.</span>
+                  <span className="skillText"> 다양한 훅 사용을 통한 여러가지 방식의 React활용이 가능합니다.</span>
                 </div>
                 <div className="skillTextbox">
                   <span className="skillText"> Component를 자유롭게 나눌 수 있으며 props의 흐름을 이해하고 있습니다.</span>
                 </div>
               </div>
             </div>
-            {/* redux */}
+            {/* Redux */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={REDUX} alt="REDUX" />
-                <span>&nbsp;:rdeux</span>
+                <img className="img" src={FescRedux} alt="REDUX" />
+                <span>&nbsp;&nbsp;: Redux</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -346,11 +367,11 @@ function About(props) {
                 </div>
               </div>
             </div>
-            {/* nextJs */}
+            {/* NextJs */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={NEXTJS} alt="NEXTJS" />
-                <span>:Next.js</span>
+                <img className="img" src={FescNext} alt="NEXTJS" />
+                <span>&nbsp;&nbsp;: Next.js</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -368,8 +389,8 @@ function About(props) {
             {/* Node.js */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={NODEJS} alt="NODEJS" />
-                <span>&nbsp;:Node.js</span>
+                <img className="img" src={BescNode} alt="NODEJS" />
+                <span>&nbsp;&nbsp;: Node.js</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -386,8 +407,8 @@ function About(props) {
             {/* Express.js */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={EXPRESSJS} alt="EXPRESSJS" />
-                <span>&nbsp;:Express.js</span>
+                <img className="img" src={BescExpress} alt="EXPRESSJS" />
+                <span>&nbsp;&nbsp;: Express.js</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -395,11 +416,11 @@ function About(props) {
                 </div>
               </div>
             </div>
-            {/* MongoDb */}
+            {/* MongoDB */}
             <div className="skillInfoBox">
               <div className="icon">
-                <img className="img" src={MONGODB} alt="MONGODB" />
-                <span>&nbsp;:MongoDB</span>
+                <img className="img" src={BescMongoDB} alt="MONGODB" />
+                <span>&nbsp;&nbsp;: MongoDB</span>
               </div>
               <div className="skillContent">
                 <div className="skillTextbox">
@@ -417,37 +438,43 @@ function About(props) {
             {/* AWS */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={AWS} alt="AWS" />
+                <img className="img" src={scAWS} alt="AWS" />
+                <span>&nbsp;&nbsp;: AWS</span>
               </div>
             </div>
             {/* Netlify */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={NETLIFY} alt="NETLIFY" />
+                <img className="img" src={scNetlify} alt="NETLIFY" />
+                <span>&nbsp;&nbsp;: Netlify</span>
               </div>
             </div>
             {/* CloudType */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={CLOUDTYPE} alt="CLOUDTYPE" />
+                <img className="img" src={scCloudType} alt="CLOUDTYPE" />
+                <span>&nbsp;&nbsp;: CloudType</span>
               </div>
             </div>
             {/* Trello */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={TRELLO} alt="TRELLO" />
+                <img className="img" src={scTrello} alt="TRELLO" />
+                <span>&nbsp;&nbsp;: Trello</span>
               </div>
             </div>
             {/* Figma */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={FIGMA} alt="FIGMA" />
+                <img className="img" src={scFigma} alt="FIGMA" />
+                <span>&nbsp;&nbsp;: Figma</span>
               </div>
             </div>
             {/* GitHub */}
             <div className="skillInfoBox2">
               <div className="icon">
-                <img className="img" src={GITHUB2} alt="GITHUB" />
+                <img className="img" src={scGithub} alt="GITHUB" />
+                <span>&nbsp;&nbsp;: GitHub</span>
               </div>
             </div>
           </div>

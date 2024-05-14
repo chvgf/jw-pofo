@@ -202,7 +202,7 @@ function Projects(props) {
         >
           {/* 고니민턴 */}
           {gonimintonBlind ? <BlindBox>🏸</BlindBox> : ""}
-          <img src={GONIMINTON} />
+          <img src={GONIMINTON} alt="GONIMINTON" />
           <div>
             <p>
               <span>고니민턴: </span>
@@ -244,7 +244,7 @@ function Projects(props) {
         >
           {/* 마이멍 */}
           {myMungBlind ? <BlindBox>🦮</BlindBox> : ""}
-          <img src={MYMUNG} />
+          <img src={MYMUNG} alt="MYMUNG" />
           <div>
             <p>
               <span>마이멍: </span>
@@ -286,7 +286,7 @@ function Projects(props) {
           }}
         >
           {pofogBlind ? <BlindBox>📄</BlindBox> : ""}
-          <img src={POFO} />
+          <img src={POFO} alt="POFO" />
           <div>
             <p>천준우 포트폴리오 사이트</p>
             <p>

@@ -17,15 +17,16 @@ React를 기반으로 만들었고, netlify, cloudtype을 사용하여 배포하
 고니민턴
 
 - 피그마로 만든 메인 디자인 퍼블리싱
+  - styled-components 활용
 - 매칭 페이지 제작
   - MongoDB 활용 CRUD
   - aixos 활용한 데이터 연동
-  -
 - 커뮤니티 페이지 제작
   - MongoDB 활용 CRUD
   - aixos 활용한 데이터 연동
-- 검색 기능 구현
 - 랜덤 매칭 기능 구현
+  - math 메소드 활용
+- 검색 기능 구현
 
 마이멍
 
