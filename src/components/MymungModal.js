@@ -177,6 +177,9 @@ const StyledSlide = styled(Slider)`
     position: absolute;
     bottom: -60px;
     background-color: transparent;
+    @media (max-width: 960px) {
+      bottom: -1rem;
+    }
   }
   .slick-dots button {
     position: absolute;
@@ -207,16 +210,19 @@ const StyledSlide = styled(Slider)`
     height: 10rem;
     /* height: auto; */
     cursor: pointer;
-    @media (max-width: 960px) {
+    /* @media (max-width: 960px) {
       width: 180px;
       height: 130px;
-    }
+    } */
   }
   .slideSummary {
     font-size: 12px;
     line-height: 1rem;
     letter-spacing: 0.5px;
     display: block;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 `;
 

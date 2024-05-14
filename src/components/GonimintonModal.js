@@ -22,7 +22,7 @@ const ModalBg = styled.div`
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -20px;
   background: gray;
   background-color: rgba(0, 0, 0, 0.7);
   background-attachment: fixed;
@@ -75,6 +75,9 @@ const ModalBox = styled.div`
     font-weight: 400;
     font-style: normal;
     font-size: 1.2rem;
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
   }
 
   .detailBox {
@@ -187,6 +190,9 @@ const StyledSlide = styled(Slider)`
     position: absolute;
     bottom: -60px;
     background-color: transparent;
+    @media (max-width: 960px) {
+      bottom: -1rem;
+    }
   }
   .slick-dots button {
     position: absolute;
@@ -217,16 +223,19 @@ const StyledSlide = styled(Slider)`
     height: 10rem;
     overflow: hidden;
     cursor: pointer;
-    @media (max-width: 960px) {
+    /* @media (max-width: 960px) {
       width: 180px;
       height: 130px;
-    }
+    } */
   }
   .slideSummary {
     font-size: 12px;
     line-height: 1rem;
     letter-spacing: 0.5px;
     display: block;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 `;
 
