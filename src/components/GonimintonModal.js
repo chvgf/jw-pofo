@@ -304,7 +304,7 @@ function GoniModal({ handleCloseMadal }) {
                 <span className="toolTextIcon">* 기술스택: </span>
                 <span className="toolText">React</span>
                 <span className="toolText">Rudex</span>
-                <span className="toolText">Aioxs</span>
+                <span className="toolText">Axios</span>
                 <span className="toolText">Styled-Components</span>
                 <span className="toolText">React-Router-Dom</span>
                 <span className="toolText be">MongoDB</span>
