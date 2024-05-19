@@ -4,6 +4,7 @@ import reset from "styled-reset";
 import Main from "./pages/Main";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import VisitorCounter from "./test/VisitorCounter";
 import "./index.css";
 
 const GlobalStyle = createGlobalStyle`
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/test" element={<VisitorCounter />} />
       </Routes>
     </>
   );
