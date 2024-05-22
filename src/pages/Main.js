@@ -3,6 +3,7 @@ import mainImg from "../imges/KakaoTalk_20240322_145101338.jpg";
 import Typewriter from "typewriter-effect";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -94,6 +95,7 @@ const SectionImg = styled.section`
 `;
 
 function Main(props) {
+  const navigate = useNavigate();
   let a = "inTest";
   let b = "outTest";
   let c = "timeOut1";
@@ -141,7 +143,13 @@ function Main(props) {
         </p>
       </SectionInfo>
       <SectionImg className={`${timeOut ? d : c}`}>
-        <img src={mainImg} alt="profile"></img>
+        <img
+          src={mainImg}
+          alt="profile"
+          onClick={() => {
+            navigate("/test");
+          }}
+        ></img>
       </SectionImg>
       <div className={`${pageAni ? b : a}`}></div>
     </MainWrapper>
