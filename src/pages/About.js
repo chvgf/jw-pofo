@@ -207,6 +207,9 @@ const Title = styled.div`
     font-size: 30px;
     text-align: center;
     margin: 60px 0 15px 0;
+    span {
+      color: #ffb400;
+    }
   }
 `;
 
@@ -299,7 +302,9 @@ function About(props) {
           <br />
           <br />
           {/* Frontend */}
-          <h4>Frontend</h4>
+          <h4>
+            <span>Main</span> - Frontend
+          </h4>
           <div className="info">
             {/* html */}
             <div className="skillInfoBox">
@@ -384,7 +389,9 @@ function About(props) {
             </div>
           </div>
           {/* Backend */}
-          <h4>Backend</h4>
+          <h4>
+            <span>sub</span> - Backend
+          </h4>
           <div className="info">
             {/* Node.js */}
             <div className="skillInfoBox">
